@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import RotateDialController from "./rotate_dial_controller"
+application.register("rotate-dial", RotateDialController)

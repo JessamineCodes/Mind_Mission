@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-
+  
   get 'level_one/challenge', to: 'pages#level_one_challenge'
   get 'level_one/snippet', to: 'pages#level_one_snippet'
 

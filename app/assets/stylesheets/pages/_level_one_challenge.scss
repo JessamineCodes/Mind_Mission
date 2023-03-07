@@ -1,0 +1,34 @@
+.breathing-dial{
+  position: relative;
+  display: inline;
+  width: 397px;
+  top: 0;
+  left: 0;
+  img:first-child {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  img:last-child {
+    position: absolute;
+    top: -144px;
+    right: 41px;
+
+  }
+  .rotation-animation {
+    animation: breathing 60s;
+    animation-duration: 60s;
+
+    @keyframes breathing {
+      0% {
+        rotate: 0deg; }
+        50% {
+          rotate: 144deg; }
+          75% {
+            rotate: -216deg;
+          }
+          100%  {
+            rotate: 144deg; }
+          }
+        }
+  }

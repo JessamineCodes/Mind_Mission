@@ -1,1 +1,10 @@
-<h1>Level 1 Challenge</h1>
+<div class="container">
+  <h1>Level 1 Challenge</h1>
+  <div data-controller="rotate-dial">
+    <div class="breathing-dial" >
+      <%= image_tag "level_one_background_wheel.png" %>
+      <%= image_tag "level_one_foreground_wheel.png", class:"rotating_wheel", data:{ rotate_dial_target: "dial"} %>
+    </div>
+    <button type="button" data-action="click->rotate-dial#rotate" >Start!</button>
+  </div>
+</div>

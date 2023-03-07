@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import CrackTheCodeController from "./crack_the_code_controller"
+application.register("crack-the-code", CrackTheCodeController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

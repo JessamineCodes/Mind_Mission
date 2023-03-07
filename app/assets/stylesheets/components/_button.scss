@@ -1,0 +1,45 @@
+.button {
+box-sizing: border-box;
+position: absolute;
+left: 10.08%;
+right: 9.69%;
+top: 0%;
+bottom: 0%;
+background: #F4EAD5;
+border: 1px solid #715252;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 8px rgba(187, 187, 187, 0.48);
+border-radius: 30px;
+};
+
+.disabled-button {
+position: absolute;
+width: 258px;
+height: 62px;
+left: 93px;
+top: 329px;
+box-sizing: border-box;
+position: absolute;
+left: 10.08%;
+right: 9.69%;
+top: 0%;
+bottom: 0%;
+background: #F4EAD5;
+border: 1px solid rgba(113, 82, 82, 0.5);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+position: absolute;
+left: 0%;
+right: 0%;
+top: 31.58%;
+bottom: 30.26%;
+font-family: 'Special Elite';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-align: center;
+color: rgba(113, 82, 82, 0.22);
+border: 1px solid #FBD87D;
+};

@@ -9,30 +9,37 @@
 
   <div class="challenge two see form mt-6" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_two_path, method: :get) do |f| %>
+      <div class="container">
+        <div class="top-arch">
+          <div class="input1">
+          <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+          </div>
+        </div>
 
-      <div class="input1">
-      <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
-      </div>
+        <div class="mid-arch">
+          <div class="input2">
+          <%= f.input :answer2, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
 
-      <div class="input2">
-      <%= f.input :answer2, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-      </div>
+          <div class="input3">
+          <%= f.input :answer3, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
+        </div>
 
-      <div class="input3">
-      <%= f.input :answer3, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-      </div>
+        <div class="bottom-arch">
+          <div class="input4">
+          <%= f.input :answer4, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
 
-      <div class="input4">
-      <%= f.input :answer4, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-      </div>
+          <div class="input5">
+          <%= f.input :answer5, as: :string,input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
+        </div>
 
-      <div class="input5">
-      <%= f.input :answer5, as: :string,input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-      </div>
-
-      <div class="challenge 2 button">
-      <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button"%>
+        <div class="challenge 2 button">
+        <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button"%>
+        </div>
       </div>
     <% end %>
-    </div>
+</div>
 </div>

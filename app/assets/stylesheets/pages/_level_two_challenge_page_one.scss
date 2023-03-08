@@ -1,9 +1,46 @@
-.input1{
-position: relative;
-width: max-content;
-}
+.container {
+  .top-arch {
+    .input1{
+      position: relative;
+      width: max-content;
+      left: 400px;
+    }
+  }
 
-.input2{
-position: relative;
+  .mid-arch {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .input2{
+      position: relative;
+      width: max-content;
+      left: 150px;
+      top: 30px;
+    }
 
+    .input3{
+      position: relative;
+      width: max-content;
+      bottom: 90px;
+      left: 700px;
+    }
+  }
+
+  .bottom-arch {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .input4{
+      position: relative;
+      width: max-content;
+      bottom: 20px;
+      }
+
+    .input5{
+      position: relative;
+      width: max-content;
+      left: 800px;
+      top: 20px;
+    }
+  }
 }

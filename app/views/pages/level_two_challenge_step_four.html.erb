@@ -1,12 +1,14 @@
-<h1>Level 2 Challenge</h1>
-<h3>level 2 step 4<h3>
+<div class="challenge two step three container">
+  <h1>Level 2 Challenge</h1>
+  <h3>level 2 step 4<h3>
 
-<p>List 2 things you can smell</p>
+  <p>List 2 things you can smell</p>
 
-<%# <%= simple_form_for() do |f| %> %>
-  <%# <%= f.input :answer1%> %>
-  <%# <%= f.input :answer2 %> %>
-  <%# <%= f.submit %> %>
-<%# <% end %> %>
-
-<%# button %>
+  <div class="challenge two hear form">
+    <%= simple_form_for(:quiz, url:level_two_challenge_step_five_path, method: :get) do |f| %>
+      <%= f.input :answer1, as: :string %>
+      <%= f.input :answer2, as: :string %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

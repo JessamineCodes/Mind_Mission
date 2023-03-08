@@ -1,1 +1,48 @@
-// Specific CSS for your home-page
+.dashboard-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tree-container{
+width: 72%;
+}
+
+
+.tree{
+width: 100%;
+margin: 20px 5px 40px 20px;
+}
+
+.acorn {
+  position: absolute;
+  top: 0px;
+}
+
+.acorn-1 {
+  top: 500px;
+  left: 200px;
+}
+
+.acorn-2 {
+  top: 420px;
+  left: 530px;
+}
+
+.acorn-3 {
+  top: 344px;
+  left: 750px;
+}
+
+.avatar{
+width: 27%;
+
+}
+
+
+.squirrel{
+  width: 100%;
+  // position: absolute;
+  // top: 30px;
+  // right: 100px;
+  // align-content: center;
+}

@@ -20,30 +20,32 @@
     animation-duration: 60s;
 
     @keyframes breathing {
+      0% {
+        rotate: 0deg; }
       7% {
-        rotate: 0deg; }
+        rotate: 144deg; }
       17% {
-        rotate: 144deg; }
-      24% {
         rotate: -72deg; }
-      34%  {
+      24%  {
         rotate: 72deg; }
+      34% {
+        rotate: -144deg; }
       41% {
-        rotate: -144deg; }
-      51% {
         rotate: 0deg; }
+      48% {
+        rotate: -144deg; }
       58% {
-        rotate: -144deg; }
-      68% {
         rotate: -72deg; }
-      75% {
+      65% {
         rotate: 72deg; }
-      85% {
+      75% {
         rotate: -144deg; }
-      92% {
+      85% {
         rotate: 0deg; }
-      100% {
+      92% {
         rotate: 144deg; }
+      100% {
+        rotate: -72deg; }
           }
         }
   }

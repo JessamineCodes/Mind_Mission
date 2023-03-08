@@ -4,7 +4,30 @@
       <h1>Level 3 Challenge</h1>
     </div>
     <p>Time to get your brain whirring! The enemy agents have jumbled up these three important words - unscramble them!</p>
-    <div style="background-color: #808080; width: 1000px; height: 500px;" data-controller="crack-the-code" data-action="click->crack-the-code#changeColor" id="" class="">
+    <div style="background-color: #FFB703; width: 1000px; height: 300px;" data-controller="crack-the-code" id="" class="">
+      <div class="d-flex justify-content-center">
+        <div class="flex-column">
+          <%# <div class="all-letters my-5">
+            <div style="display: inline-block; background-color: #E36414; width: 60px; height: 60px; margin: 5px;">?</div>
+            <div style="display: inline-block; background-color: #E36414; width: 60px; height: 60px; margin: 5px;">?</div>
+            <div style="display: inline-block; background-color: #E36414; width: 60px; height: 60px; margin: 5px;">?</div>
+            <div style="display: inline-block; background-color: #E36414; width: 60px; height: 60px; margin: 5px;">?</div>
+            <div style="display: inline-block; background-color: #E36414; width: 60px; height: 60px; margin: 5px;">?</div>
+            <div style="display: inline-block; background-color: #E36414; width: 60px; height: 60px; margin: 5px;">?</div>
+          </div> %>
+          <p class="word" style="font-size: 4rem;"></p>
+          <p class="hint">Hint: <span></span></p>
+          <div class="d-flex justify-content-center">
+            <form action="/action_page.php">
+              <input type="text" id="user-input" name="user-input">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="solution btn btn-primary px-3 py-3">Solution</button>
+      <button type="button" class="check btn btn-primary px-3 py-3">Check</button>
     </div>
   </div>
 </div>

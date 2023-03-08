@@ -9,7 +9,7 @@
       <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
       <%= f.input :answer2, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
       <%= f.input :answer3, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-      <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}  %>
+      <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button" %>
     <% end %>
   </div>
 </div>

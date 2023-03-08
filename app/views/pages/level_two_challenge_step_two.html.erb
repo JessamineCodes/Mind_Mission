@@ -4,13 +4,13 @@
 
   <p>List 4 things you can touch</p>
 
-  <div class="challenge two touch form">
+  <div class="challenge two touch form" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get) do |f| %>
-      <%= f.input :answer1, as: :string %>
-      <%= f.input :answer2, as: :string %>
-      <%= f.input :answer3, as: :string %>
-      <%= f.input :answer4, as: :string %>
-      <%= f.submit %>
+      <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+      <%= f.input :answer2, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+      <%= f.input :answer3, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+      <%= f.input :answer4, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}%>
+      <%= f.button :submit, disabled: true, data: {disable_button_target: "button"} %>
     <% end %>
   </div>
 </div>

@@ -4,10 +4,10 @@
 
   <p>List 1 thing you can taste</p>
 
-  <div class="challenge two taste form">
+  <div class="challenge two taste form" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get) do |f| %>
-      <%= f.input :answer1, as: :string %>
-      <%= f.submit %>
+      <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+      <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}  %>
     <% end %>
   </div>
 </div>

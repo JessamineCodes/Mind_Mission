@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-
+  
   get 'level_one/challenge', to: 'pages#level_one_challenge'
   get 'level_one/snippet', to: 'pages#level_one_snippet'
 
 
-  get 'level_two/challenge', to: 'pages#level_two_challenge'
+  get 'level_two/challenge/step_one', to: 'pages#level_two_challenge_step_one'
+  get 'level_two/challenge/step_two', to: 'pages#level_two_challenge_step_two'
+  get 'level_two/challenge/step_three', to: 'pages#level_two_challenge_step_three'
+  get 'level_two/challenge/step_four', to: 'pages#level_two_challenge_step_four'
+  get 'level_two/challenge/step_five', to: 'pages#level_two_challenge_step_five'
   get 'level_two/snippet', to: 'pages#level_two_snippet'
 
   get 'level_three/challenge', to: 'pages#level_three_challenge'

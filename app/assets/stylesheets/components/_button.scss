@@ -12,6 +12,7 @@
   font-weight: 400;
   line-height: 28px;
   cursor: pointer;
+  text-decoration: none;
   &:hover{
     animation: shake 0.6s infinite;
   }
@@ -49,4 +50,5 @@
   line-height: 28px;
   color: rgba(113, 82, 82, 0.22);
   border: 1px solid #FBD87D;
+  pointer-events: none;
 };

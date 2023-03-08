@@ -17,7 +17,7 @@ export default class extends Controller {
     this.buttonTarget.classList.add("disabled-button")
     this.dialTarget.addEventListener("animationend", (event) => {
       console.log("Animation finished")
-      this.rewardTarget.style.display = "block"})
+      this.rewardTarget.style.display = "flex"})
 
     // this.dialTarget.style.transform = "rotate(144deg)";
     // this.dialTarget.style.transform = "rotate(144deg)";

@@ -16,8 +16,8 @@
 
   }
   .rotation-animation {
-    animation: breathing 6s;
-    animation-duration: 6s;
+    animation: breathing 60s;
+    animation-duration: 60s;
 
     @keyframes breathing {
       0% {
@@ -33,19 +33,19 @@
       41% {
         rotate: 0deg; }
       48% {
-        rotate: -144deg; }
+        rotate: -216deg; }
       58% {
         rotate: -72deg; }
       65% {
-        rotate: 72deg; }
+        rotate: -288deg; }
       75% {
         rotate: -144deg; }
       85% {
-        rotate: 0deg; }
+        rotate: -360deg; }
       92% {
-        rotate: 144deg; }
+        rotate: -216deg; }
       100% {
-        rotate: -72deg; }
+        rotate: -432deg; }
           }
         }
   }

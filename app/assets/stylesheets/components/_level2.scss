@@ -1,0 +1,67 @@
+#content {
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fedc7b;
+  height: calc(100vh - 66px);
+}
+
+.testimonial blockquote {
+  margin: 10px 10px 0;
+  background: #FFB703;
+  padding: 20px 60px;
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  font-style: italic;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial .text-wrapper {
+  margin-top: -30px;
+}
+
+.testimonial blockquote:before,
+.testimonial blockquote:after {
+  content: "\201C";
+  position: absolute;
+  font-size: 80px;
+  line-height: 1;
+  color: #000000;
+  font-style: normal;
+}
+
+.testimonial blockquote:before {
+  top: 70px;
+  left: 100px;
+}
+
+.testimonial blockquote:after {
+  content: "\201D";
+  right: 70px;
+  bottom: 50px;
+}
+
+.testimonial .triangle {
+  width: 10px;
+  height: 10px;
+  border-left: 0 solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 60px solid #FFB703;
+  margin: 0 0 0 60px;
+  transform: rotate(90deg);
+  position: relative;
+  top: -230px;
+  left: -100px;
+}
+
+.testimonial p {
+  margin: 8px 0 0 20px;
+  color: #000000;
+}

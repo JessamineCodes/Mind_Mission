@@ -11,8 +11,8 @@
   }
   img:last-child {
     position: absolute;
-    top: -144px;
-    right: 41px;
+    top: 44px;
+    right: 42px;
 
   }
   .rotation-animation {
@@ -22,13 +22,43 @@
     @keyframes breathing {
       0% {
         rotate: 0deg; }
-        50% {
-          rotate: 144deg; }
-          75% {
-            rotate: -216deg;
-          }
-          100%  {
-            rotate: 144deg; }
+      7% {
+        rotate: 144deg; }
+      17% {
+        rotate: -72deg; }
+      24%  {
+        rotate: 72deg; }
+      34% {
+        rotate: -144deg; }
+      41% {
+        rotate: 0deg; }
+      48% {
+        rotate: -216deg; }
+      58% {
+        rotate: -72deg; }
+      65% {
+        rotate: -288deg; }
+      75% {
+        rotate: -144deg; }
+      85% {
+        rotate: -360deg; }
+      92% {
+        rotate: -216deg; }
+      100% {
+        rotate: -432deg; }
           }
         }
   }
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challenge-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+}

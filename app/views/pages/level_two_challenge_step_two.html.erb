@@ -1,14 +1,16 @@
-<h1>Level 2 Challenge</h1>
-<h3>level 2 step 2<h3>
+<div class="challenge two step two container">
+  <h1>Level 2 Challenge</h1>
+  <h3>level 2 step 2<h3>
 
-<p>List 4 things you can touch</p>
+  <p>List 4 things you can touch</p>
 
-<%# <%= simple_form_for() do |f| %> %>
-  <%# <%= f.input :answer1%> %>
-  <%# <%= f.input :answer2 %> %>
-  <%# <%= f.input :answer3 %> %>
-  <%# <%= f.input :answer4 %> %>
-  <%# <%= f.submit %> %>
-<%# <% end %> %>
-
-<%# button %>
+  <div class="challenge two touch form" data-controller="disable-button">
+    <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get) do |f| %>
+      <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+      <%= f.input :answer2, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+      <%= f.input :answer3, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+      <%= f.input :answer4, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}%>
+      <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button" %>
+    <% end %>
+  </div>
+</div>

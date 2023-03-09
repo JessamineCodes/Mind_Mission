@@ -1,0 +1,56 @@
+/* Gadget card */
+
+/* Auto layout */
+.reward{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 450px;
+    height: 325px;
+    background: #FFB703;
+    box-shadow: 4px 4px 16px rgba(136, 136, 136, 0.5);
+    border-radius: 7px;
+    display: none;
+    z-index: 5;
+}
+
+.reward img{
+  width: 400px;
+  height: 200px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.reward h1{
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #3D2B3D;
+}
+
+
+.reward p{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #3D2B3D;
+}
+
+.reward .button {
+  font-size: 16px;
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  display: block;
+}

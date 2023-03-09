@@ -1,10 +1,17 @@
 <div class="container">
-  <h1>Level 1 Challenge</h1>
-  <div data-controller="rotate-dial">
+  <h1>Crack the Safe</h1>
+  <p>Keep calm and crack the safe! Spies need to remain calm under pressure, and deep breathing can help you stay calm. Breathe in when the dial turns to the left and out when it turns to the right!</p>
+  <div class="challenge-and-button" data-controller="rotate-dial">
+    <div class="reward" data-rotate-dial-target="reward">
+      <h1>You unlocked a reward!</h1>
+      <%= image_tag "reward_placeholder.png" %>
+      <p>This is an amazing spy gadget blahblahblah</p>
+      <%= link_to "Great!", level_one_snippet_path, class:"button" %>
+    </div>
+    <button class="button" data-rotate-dial-target="button" data-action="click->rotate-dial#rotate" >Start!</button>
     <div class="breathing-dial" >
       <%= image_tag "level_one_background_wheel.png" %>
       <%= image_tag "level_one_foreground_wheel.png", class:"rotating_wheel", data:{ rotate_dial_target: "dial"} %>
     </div>
-    <button type="button" data-action="click->rotate-dial#rotate" >Start!</button>
   </div>
 </div>

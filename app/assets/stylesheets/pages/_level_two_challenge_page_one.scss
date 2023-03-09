@@ -1,46 +1,87 @@
-.container {
+.game-2-container {
   .top-arch {
+    justify-content: center;
+    display: flex;
+
+
     .input1{
       position: relative;
       width: max-content;
-      left: 400px;
     }
   }
 
   .mid-arch {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: 32px 48px 48px;
     .input2{
-      position: relative;
+      position:relative;
       width: max-content;
-      left: 150px;
-      top: 30px;
+      justify-content: left;
+
+
     }
 
     .input3{
       position: relative;
       width: max-content;
-      bottom: 90px;
-      left: 700px;
+      justify-content: right;
+
+
     }
   }
 
   .bottom-arch {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     .input4{
       position: relative;
       width: max-content;
-      bottom: 20px;
+
       }
 
     .input5{
       position: relative;
       width: max-content;
-      left: 800px;
-      top: 20px;
+
+
     }
   }
 }
+
+.game-2-inputs{
+  input {
+    background-color: $primary;
+    border-radius: 48px;
+    border: none;
+    text-align: center;
+    height: 73px;
+    font-size: 28px;
+    width: 191px;
+    &:focus {
+      background-color: $primary;
+
+
+    }
+  }
+  input::placeholder{
+    color:black;
+  }
+}
+.eye-logo {
+  height: 238px;
+  position:absolute;
+  top:calc(50% - 119px);
+  left:calc(50% - 101.5px);
+
+}
+.game-2-container {
+  max-width: 824px;
+  margin: 0px auto;
+  position: relative;
+}
+
+
+

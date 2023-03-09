@@ -1,43 +1,46 @@
 <div class="challenge two step one container">
-  <h1>Level 2 Challenge</h1>
-  <h3>level 2 step 1<h3>
+  <h1>Hone Your Spy Skills</h1>
 
   <p>Do you have what it takes to take your spy skills to the next level? Center your mind and focus on your surroundings...</p>
+  <br> </br>
 
-  <p>List 5 things you
-  can see</p>
+  <h3>List 5 things you
+  can see</h3>
 
   <div class="challenge two see form mt-6" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_two_path, method: :get) do |f| %>
-      <div class="container">
-        <div class="top-arch">
+      <div class="game-2-container">
+        <%= image_tag "eye.png", class:"eye-logo" %>
+        <div class="top-arch game-2-inputs">
           <div class="input1">
-          <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+          <%= f.input :answer1, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
           </div>
         </div>
 
-        <div class="mid-arch">
+        <div class="mid-arch game-2-inputs">
           <div class="input2">
-          <%= f.input :answer2, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
           </div>
 
           <div class="input3">
-          <%= f.input :answer3, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
           </div>
         </div>
 
-        <div class="bottom-arch">
+        <div class="bottom-arch game-2-inputs">
           <div class="input4">
-          <%= f.input :answer4, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
           </div>
 
           <div class="input5">
-          <%= f.input :answer5, as: :string,input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          <%= f.input :answer5, as: :string,label:false,placeholder:"Type here",input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
           </div>
         </div>
 
-        <div class="challenge 2 button">
-        <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button"%>
+        <div class="challenge 2 d-flex justify-content-center mt-4">
+          <div class="button">
+            <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button"%>
+          </div>
         </div>
       </div>
     <% end %>

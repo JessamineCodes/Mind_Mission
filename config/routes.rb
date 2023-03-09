@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
+  get 'dashboard', to: 'pages#dashboard'
+
   get 'level_one/challenge', to: 'pages#level_one_challenge'
   get 'level_one/snippet', to: 'pages#level_one_snippet'
   get :level_one_checkpoint, to: 'pages#level_one_checkpoint'

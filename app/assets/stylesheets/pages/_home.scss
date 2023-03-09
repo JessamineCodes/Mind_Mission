@@ -1,1 +1,77 @@
-// Specific CSS for your home-page
+.dashboard-container{
+  display: flex;
+  justify-content: space-between;
+  width: 1492px;
+  position: relative;
+  margin-right: 40px;
+}
+
+.tree-container{
+  width: 80%;
+  height: 570px;
+  position: absolute;
+  left: -115px;
+}
+
+
+.tree{
+width: 100%;
+}
+
+.acorn {
+  position: absolute;
+  top: 0px;
+}
+
+.acorn-1 {
+  top: 310px;
+  left: 100px;
+}
+
+.acorn-2 {
+  top: 193px;
+  left: 415px;
+}
+
+.acorn-3 {
+  top: 163px;
+  left: 705px;
+}
+
+.squirrel-img{
+width: 30%;
+bottom: auto;
+position: absolute;
+right: 20px;
+top: auto;
+
+img {
+  width: 100%;
+  height: 590px;
+  object-fit: cover;
+  object-position: bottom;
+}
+}
+
+h1{
+  font-size: 64px;
+  color: #3D2B3D;
+  font-family: Special Elite;
+  text-align: center;
+}
+
+
+p{
+  font-size: 30px;
+  color: #D62828;
+  font-family: Special Elite;
+  text-align: center;
+}
+
+
+// squirrel-img{
+// width: 100%;
+// position: absolute;
+// top: 30px;
+// right: 100px;
+// align-content: center;

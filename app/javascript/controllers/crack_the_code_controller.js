@@ -45,7 +45,11 @@ export default class extends Controller {
       alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
     }
 
-    solutionBtn.addEventListener("click", initGame);
+    const showAnswer = () => {
+      wordText.innerText = correctWord.toUpperCase();
+    }
+
+    solutionBtn.addEventListener("click", showAnswer);
     checkBtn.addEventListener("click", checkWord);
   }
 }

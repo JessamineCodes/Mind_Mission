@@ -8,11 +8,15 @@ export default class extends Controller {
     const words = [
       {
         word: "APPLE",
-        hint: "hint1"
+        hint: "🍎"
       },
       {
         word: "BANANA",
-        hint: "hint2"
+        hint: "🍌"
+      },
+      {
+        word: "ORANGE",
+        hint: "🍊"
       }
     ];
 

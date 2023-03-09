@@ -18,5 +18,5 @@ user3.save
 user4 = User.new(email: "zac@test.com", password: "123456", first_name: "Zac", level: 3)
 user4.save
 
-user5 = User.new(email: "dilbur@test.com", password: "123456", first_name: "Dilbur", level: 3)
+user5 = User.new(email: "dilber@test.com", password: "123456", first_name: "Dilbur", level: 3)
 user5.save

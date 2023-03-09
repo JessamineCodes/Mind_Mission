@@ -3,20 +3,16 @@
 
   <h3>List 1 thing you can taste</h3>
 
+
   <div class="challenge two taste form" data-controller="disable-button">
-    <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get) do |f| %>
-
+    <div class="reward" data-disable-button-target="reward">
+      <h1>You unlocked a reward!</h1>
+      <%= image_tag "reward_placeholder.png" %>
+      <p>This is an amazing spy gadget blahblahblah</p>
+      <%= link_to "Great!", level_two_checkpoint_path, class:"button"%>
+    </div>
+    <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get, data: {action: "submit->disable-button#openReward"}) do |f| %>
       <div class="game-2-container-1">
-
-        <div class="mid-arch game-2-inputs">
-          <div class="input2">
-          <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-
-          <div class="input3">
-          <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-        </div>
 
         <div class="bottom-arch game-2-inputs">
           <div class="input4">

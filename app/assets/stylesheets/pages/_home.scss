@@ -1,6 +1,7 @@
 .dashboard-container{
   display: flex;
   justify-content: space-between;
+  width: 1492px;
 }
 
 .tree-container{
@@ -10,7 +11,7 @@ width: 72%;
 
 .tree{
 width: 100%;
-margin: 20px 5px 40px 20px;
+
 }
 
 .acorn {
@@ -33,16 +34,41 @@ margin: 20px 5px 40px 20px;
   left: 750px;
 }
 
-.avatar{
+.squirrel-img{
 width: 27%;
+bottom: auto;
+height: max-content;
+position: relative;
+}
 
+h1{
+  font-size: 64px;
+  color: #3D2B3D;
+  font-family: Special Elite;
+  text-align: center;
 }
 
 
-.squirrel{
-  width: 100%;
-  // position: absolute;
-  // top: 30px;
-  // right: 100px;
-  // align-content: center;
+p{
+  font-size: 30px;
+  color: #D62828;
+  font-family: Special Elite;
+  text-align: center;
 }
+
+
+// squirrel-img{
+// width: 100%;
+// position: absolute;
+// top: 30px;
+// right: 100px;
+// align-content: center;
+
+
+
+
+
+
+// kat to do
+// seed - add user for each level 0-3
+// Amend code in line with acorn 1 example

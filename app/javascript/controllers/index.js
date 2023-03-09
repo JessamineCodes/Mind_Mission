@@ -4,6 +4,10 @@
 
 import { application } from "./application"
 
+
+import CrackTheCodeController from "./crack_the_code_controller"
+application.register("crack-the-code", CrackTheCodeController)
+
 import DisableButtonController from "./disable_button_controller"
 application.register("disable-button", DisableButtonController)
 

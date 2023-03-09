@@ -1,55 +1,59 @@
-Copy code
+
 .splash-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  // justify-content: center;
   align-items: center;
   height: 100vh;
 }
-
-.splash-circle {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 .splash-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  width: 200px;
 }
 
-.splash-text-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .splash-circle {
+//   position: relative;
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 50%;
+//   overflow: hidden;
+// }
 
-.splash-moving-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #fff;
-  animation: rotate 8s linear infinite;
-}
+// .splash-image {
+//   display: block;
+//   width: 100%;
+//   height: auto;
+//   object-fit: cover;
+// }
 
-@keyframes rotate {
-  0% {
-    transform: translate(-50%, -200%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -200%) rotate(360deg);
-  }
-}
+// .splash-text-container {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .splash-moving-text {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 100px;
+//   height: 100px;
+//   line-height: 100px;
+//   text-align: center;
+//   border-radius: 50%;
+//   background-color: #fff;
+//   animation: rotate 8s linear infinite;
+// }
+
+// @keyframes rotate {
+//   0% {
+//     transform: translate(-50%, -200%) rotate(0deg);
+//   }
+//   100% {
+//     transform: translate(-50%, -200%) rotate(360deg);
+//   }
+// }

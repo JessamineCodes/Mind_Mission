@@ -39,15 +39,24 @@ export default class extends Controller {
     initGame();
 
     const checkWord = () => {
+      let currentRound = 1;
+      const rounds = document.querySelector(".rounds")
       let userWord = inputField.value.toLocaleLowerCase();
       if (!userWord) return alert("Please enter a word");
       if (userWord !== correctWord) return alert(`Oops! ${userWord} is not the correct word!`);
-      alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
+      // while (currentRound !== 3) {
+      // }
+      rounds.innerText = `${currentRound += 1}/3`
+      // alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
     }
 
     const showAnswer = () => {
       wordText.innerText = correctWord.toUpperCase();
     }
+
+    // const cheatGame =() => {
+    // }
+    // cheatBtn.addEventListener("click", cheatGame);
 
     solutionBtn.addEventListener("click", showAnswer);
     checkBtn.addEventListener("click", checkWord);

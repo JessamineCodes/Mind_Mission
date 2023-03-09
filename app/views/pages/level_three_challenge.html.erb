@@ -4,22 +4,42 @@
       <h1>Level 3 Challenge</h1>
     </div>
     <p>Time to get your brain whirring! The enemy agents have jumbled up these three important words - unscramble them!</p>
-    <div style="background-color: #FFB703; width: 1000px; height: 300px;" data-controller="crack-the-code" id="" class="">
-      <div class="d-flex justify-content-center">
-        <div class="flex-column">
-          <p class="word" style="font-size: 4rem;"></p>
-          <p class="hint">Hint: <span></span></p>
+    <div class="d-flex justify-content-center">
+        <div data-controller="crack-the-code" id="" class="scramble_game_container">
           <div class="d-flex justify-content-center">
-            <form action="/action_page.php">
-              <input type="text" id="user-input" name="user-input">
-            </form>
+            <div class="flex-column">
+              <p class="word" style="font-size: 4rem;"></p>
+              <p class="hint">Hint: <span></span></p>
+              <div class="d-flex justify-content-center">
+                <form action="/action_page.php">
+                  <input type="text" id="user-input" name="user-input">
+                </form>
+              </div>
+              <p class="rounds"><span class="wave-number">1</span>/3</p>
+            </div>
           </div>
         </div>
-      </div>
     </div>
     <div class="d-flex justify-content-center">
-      <button type="button" class="solution btn btn-primary px-3 py-3">Solution</button>
-      <button type="button" class="check btn btn-primary px-3 py-3">Check</button>
+      <button type="button" class="solution button px-3 py-3">Solution</button>
+      <button type="button" class="check button px-3 py-3">Check</button>
+      <button type="button" class="cheat button px-3 py-3">🔥🔥🔥</button>
     </div>
   </div>
 </div>
+
+<%# <div class="container">
+  <h1>Level 3 Challenge</h1>
+  <p>Time to get your brain whirring! The enemy agents have jumbled up these three important words - unscramble them!</p>
+  <div class="game-container">
+    <p class="word" style="font-size: 4rem;"></p>
+    <p class="hint">Hint: <span></span></p>
+    <form action="/action_page.php">
+      <input type="text" id="user-input" name="user-input">
+    </form>
+  </div>
+  <div class="button-container">
+    <button type="button" class="solution button px-3 py-3">Solution</button>
+    <button type="button" class="check button px-3 py-3">Check</button>
+  </div>
+</div> %>

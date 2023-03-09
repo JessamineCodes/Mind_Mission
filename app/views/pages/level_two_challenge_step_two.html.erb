@@ -3,13 +3,36 @@
 
   <h3>List 4 things you can touch</h3>
 
-  <div class="challenge two touch form" data-controller="disable-button">
+  <div class="challenge form mt-6" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get) do |f| %>
-      <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
-      <%= f.input :answer2, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
-      <%= f.input :answer3, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
-      <%= f.input :answer4, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}%>
-      <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button" %>
+      <div class="game-2-container-1">
+
+        <div class="mid-arch game-2-inputs">
+          <div class="input2">
+          <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
+
+          <div class="input3">
+          <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
+        </div>
+
+        <div class="bottom-arch game-2-inputs">
+          <div class="input4">
+          <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
+
+          <div class="input5">
+          <%= f.input :answer5, as: :string,label:false,placeholder:"Type here",input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+          </div>
+        </div>
+
+        <div class="challenge 2 d-flex justify-content-center mt-4">
+          <div class="button">
+            <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button"%>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

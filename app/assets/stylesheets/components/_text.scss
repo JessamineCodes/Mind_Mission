@@ -6,12 +6,15 @@ h1 {
 }
 
 h1,h3 {
+
   color: $accent;
+  font-style: $headers-font;
 }
 
 p {
   font-size: 25px;
-  font-family: 'Montserrat', sans-serif;
+  color: $font-color;
+  font-style: $body-font;
   text-align: center;
 }
 

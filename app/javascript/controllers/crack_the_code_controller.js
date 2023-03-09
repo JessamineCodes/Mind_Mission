@@ -20,7 +20,8 @@ export default class extends Controller {
     hintText = document.querySelector(".hint span"),
     inputField = document.querySelector("#user-input"),
     solutionBtn = document.querySelector(".solution"),
-    checkBtn = document.querySelector(".check");
+    checkBtn = document.querySelector(".check"),
+    cheatBtn = document.querySelector(".cheat");
 
     let correctWord;
 
@@ -56,13 +57,13 @@ export default class extends Controller {
       wordText.innerText = correctWord.toUpperCase();
     }
 
-    // const cheatGame =() => {
-    // }
-    // cheatBtn.addEventListener("click", cheatGame);
+    const cheatGame = () => {
+      console.log("Cheat button connected")
+      this.rewardTarget.style.display = "flex"
+    }
 
+    cheatBtn.addEventListener("click", cheatGame);
     solutionBtn.addEventListener("click", showAnswer);
     checkBtn.addEventListener("click", checkWord);
   }
 }
-
-// this.rewardTarget.style.display = "flex"

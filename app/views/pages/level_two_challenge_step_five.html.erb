@@ -4,8 +4,15 @@
 
   <p>List 1 thing you can taste</p>
 
+
   <div class="challenge two taste form" data-controller="disable-button">
-    <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get) do |f| %>
+  <div class="reward" data-disable-button-target="reward">
+    <h1>You unlocked a reward!</h1>
+    <%= image_tag "reward_placeholder.png" %>
+    <p>This is an amazing spy gadget blahblahblah</p>
+    <%= link_to "Great!", level_two_checkpoint_path, class:"button"%>
+  </div>
+    <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get, data: {action: "submit->disable-button#openReward"}) do |f| %>
       <%= f.input :answer1, as: :string, input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
       <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button"  %>
     <% end %>

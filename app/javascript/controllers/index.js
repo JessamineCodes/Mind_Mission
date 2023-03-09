@@ -4,7 +4,6 @@
 
 import { application } from "./application"
 
-
 import CrackTheCodeController from "./crack_the_code_controller"
 application.register("crack-the-code", CrackTheCodeController)
 
@@ -13,6 +12,7 @@ application.register("disable-button", DisableButtonController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
 
 import RotateDialController from "./rotate_dial_controller"
 application.register("rotate-dial", RotateDialController)

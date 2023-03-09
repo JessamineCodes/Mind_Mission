@@ -9,6 +9,30 @@
   background: #FFB703;
   box-shadow: 4px 4px 16px rgba(136, 136, 136, 0.5);
   border-radius: 7px;
+
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+
+  .word {
+    font-size: 4rem;
+    letter-spacing: 2rem;
+  }
+
+  .rounds {
+    margin-bottom: 0;
+    align-self: flex-end;
+  }
+}
+
+.buttons {
+  margin-top: 30px;
 }
 
 /* Input */
@@ -28,4 +52,5 @@
   // display: flex;
   // align-items: center;
   color: #3D2B3D;
+  padding: 15px 30px;
 }

@@ -1,39 +1,40 @@
-
-<div>
-  <h1>  Welcome To Spy School! </h1>
-  <p> Welcome to Spy School! Complete the challenges to graduate as a super secret super spy! Select the next question mark to complete your challenge....<p>
-</div>
-
-<div class="container mt-5 dashboard-container">
-  <div class="tree-container">
-    <%= image_tag "tree branch.png", class:"tree" %>
-    <div class="acorn acorn-1">
-      <% if current_user.level >= 1 %>
-        <%= link_to (image_tag "jetpack.png"), level_one_challenge_path %>
-      <% else %>
-        <%= link_to (image_tag "white question mark.png"), level_one_challenge_path %>
-      <% end %>
-    </div>
-    <div class="acorn acorn-2">
-      <% if current_user.level >=2 %>
-        <%= link_to (image_tag "sunglasses acorn.png"), level_two_challenge_step_one_path %>
-      <% elsif current_user.level == 1 %>
-        <%= link_to (image_tag "white question mark.png"), level_two_challenge_step_one_path %>
-      <% else %>
-        <%= image_tag "black question mark.png" %>
-      <% end %>
-    </div>
-    <div class="acorn acorn-3">
-      <% if current_user.level >= 3 %>
-        <%= link_to (image_tag "umbrella.png"),  level_three_challenge_path %>
-      <% elsif current_user.level == 2 %>
-        <%= link_to (image_tag "white question mark.png"),  level_three_challenge_path %>
-      <% else %>
-        <%= image_tag "black question mark.png" %>
-      <% end %>
-    </div>
+<div class="home containter">
+  <div>
+    <h1> Welcome To Spy School!</h1>
+    <p> Welcome to Spy School! Complete the challenges to graduate as a super secret super spy! Select the next question mark to complete your challenge....<p>
   </div>
-  <div class="squirrel-img">
-    <%= image_tag "squirrel.png" , class:"squirrel" %>
+
+  <div class="container mt-5 dashboard-container">
+    <div class="tree-container">
+      <%= image_tag "tree branch.png", class:"tree" %>
+      <div class="acorn acorn-1">
+        <% if current_user.level >= 1 %>
+          <%= link_to (image_tag "jetpack.png"), level_one_challenge_path %>
+        <% else %>
+          <%= link_to (image_tag "white question mark.png"), level_one_challenge_path %>
+        <% end %>
+      </div>
+      <div class="acorn acorn-2">
+        <% if current_user.level >=2 %>
+          <%= link_to (image_tag "sunglasses acorn.png"), level_two_challenge_step_one_path %>
+        <% elsif current_user.level == 1 %>
+          <%= link_to (image_tag "white question mark.png"), level_two_challenge_step_one_path %>
+        <% else %>
+          <%= image_tag "black question mark.png" %>
+        <% end %>
+      </div>
+      <div class="acorn acorn-3">
+        <% if current_user.level >= 3 %>
+          <%= link_to (image_tag "umbrella.png"),  level_three_challenge_path %>
+        <% elsif current_user.level == 2 %>
+          <%= link_to (image_tag "white question mark.png"),  level_three_challenge_path %>
+        <% else %>
+          <%= image_tag "black question mark.png" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="squirrel-img">
+      <%= image_tag "squirrel.png" , class:"squirrel" %>
+    </div>
   </div>
 </div>

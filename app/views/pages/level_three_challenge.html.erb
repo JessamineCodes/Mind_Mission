@@ -5,13 +5,13 @@
     </div>
     <p>Time to get your brain whirring! The enemy agents have jumbled up these three important words - unscramble them!</p>
 
-    <div class="d-flex justify-content-center">
-      <div data-controller="crack-the-code" id="" class="scramble_game_container">
+    <div class="d-flex justify-content-center" data-controller="crack-the-code" >
+      <div id="" class="scramble_game_container">
         <div class="reward" data-crack-the-code-target="reward">
           <h1>You unlocked a reward!</h1>
           <%= image_tag "reward_placeholder.png" %>
           <p>This is an amazing spy gadget blahblahblah</p>
-          <%= link_to "Great!", level_one_snippet_path, class:"button" %>
+          <%= link_to "Great!", level_three_snippet_path, class:"button" %>
         </div>
         <div class="d-flex justify-content-center">
           <div class="flex-column">

@@ -2,6 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="crack-the-code"
 export default class extends Controller {
+  static targets = ["reward"]
+
   connect() {
     const words = [
       {
@@ -62,3 +64,5 @@ export default class extends Controller {
     checkBtn.addEventListener("click", checkWord);
   }
 }
+
+// this.rewardTarget.style.display = "flex"

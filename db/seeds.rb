@@ -6,5 +6,17 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-user1 = User.new(email: "user1@test.com", password: "123456", first_name: "Kat")
+user1 = User.new(email: "jess@test.com", password: "123456", first_name: "Jess", level: 0)
 user1.save
+
+user2 = User.new(email: "kat@test.com", password: "123456", first_name: "Kat", level: 1)
+user2.save
+
+user3 = User.new(email: "issy@test.com", password: "123456", first_name: "Issy", level: 2)
+user3.save
+
+user4 = User.new(email: "zac@test.com", password: "123456", first_name: "Zac", level: 3)
+user4.save
+
+user5 = User.new(email: "dilbur@test.com", password: "123456", first_name: "Dilbur", level: 3)
+user5.save

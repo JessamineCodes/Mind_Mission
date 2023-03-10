@@ -4,7 +4,7 @@
   <h3>List 1 thing you can taste</h3>
 
 
-  <div class="challenge two taste form" data-controller="disable-button">
+  <div class="challenge two form" data-controller="disable-button">
     <div class="reward" data-disable-button-target="reward">
       <h1>You unlocked a reward!</h1>
       <%= image_tag "reward_placeholder.png" %>
@@ -12,7 +12,9 @@
       <%= link_to "Great!", level_two_checkpoint_path, class:"button"%>
     </div>
     <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get, data: {action: "submit->disable-button#openReward"}) do |f| %>
-      <div class="game-2-container-1">
+      <div class="game-2-container-5">
+
+        <%= image_tag "mouth.png", class:"mouth-logo" %>
 
         <div class="bottom-arch game-2-inputs">
           <div class="input4">
@@ -20,7 +22,7 @@
           </div>
         </div>
 
-        <div class="challenge 2 d-flex justify-content-center mt-4">
+        <div class="challenge 2 d-flex justify-content-center mt-2 pt-3">
           <div class="button">
             <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button"%>
           </div>

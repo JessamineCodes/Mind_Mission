@@ -1,26 +1,4 @@
-.game-2-container-2 {
-
-  .mid-arch {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 32px 48px 48px;
-    .input2{
-      position:relative;
-      width: max-content;
-      justify-content: left;
-
-
-    }
-
-    .input3{
-      position: relative;
-      width: max-content;
-      justify-content: right;
-
-
-    }
-  }
+.game-2-container-5 {
 
   .bottom-arch {
     display: flex;
@@ -31,14 +9,7 @@
       width: max-content;
 
       }
-
-    .input5{
-      position: relative;
-      width: max-content;
-
-
     }
-  }
 }
 
 .game-2-inputs{
@@ -60,15 +31,22 @@
     color:black;
   }
 }
-.logo {
+.mouth-logo {
   height: 238px;
-  position:absolute;
+  position: absolute;
   top:calc(50% - 119px);
-  left:calc(50% - 101.5px);
+  left:calc(50% - 138px);
 
 }
-.game-2-container-2 {
+.game-2-container-5 {
   max-width: 824px;
   margin: 0px auto;
   position: relative;
+  height: 300px;
+}
+
+.game-2-container-5 .button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
 }

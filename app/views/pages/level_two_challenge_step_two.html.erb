@@ -5,8 +5,10 @@
 
   <div class="challenge form mt-6" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get) do |f| %>
-      <div class="game-2-container-1">
 
+      <div class="game-2-container-2">
+
+        <%= image_tag "paw.png", class:"logo" %>
         <div class="mid-arch game-2-inputs">
           <div class="input2">
           <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>

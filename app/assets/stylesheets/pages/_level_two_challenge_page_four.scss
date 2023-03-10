@@ -1,10 +1,20 @@
-.game-2-container-2 {
+.game-2-container-4 {
+  .top-arch {
+    justify-content: center;
+    display: flex;
+
+
+    .input1{
+      position: relative;
+      width: max-content;
+    }
+  }
 
   .mid-arch {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 32px 48px 48px;
+    margin: 32px 48px 120px;
     .input2{
       position:relative;
       width: max-content;
@@ -17,24 +27,6 @@
       position: relative;
       width: max-content;
       justify-content: right;
-
-
-    }
-  }
-
-  .bottom-arch {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .input4{
-      position: relative;
-      width: max-content;
-
-      }
-
-    .input5{
-      position: relative;
-      width: max-content;
 
 
     }
@@ -60,14 +52,14 @@
     color:black;
   }
 }
-.logo {
+.nose-logo {
   height: 238px;
   position:absolute;
   top:calc(50% - 119px);
-  left:calc(50% - 101.5px);
+  left:calc(50% - 138px);
 
 }
-.game-2-container-2 {
+.game-2-container-4 {
   max-width: 824px;
   margin: 0px auto;
   position: relative;

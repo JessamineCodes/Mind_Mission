@@ -1,10 +1,10 @@
-.game-2-container-2 {
+.game-2-container-3 {
 
   .mid-arch {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 32px 48px 48px;
+    margin: 32px 5px 48px;
     .input2{
       position:relative;
       width: max-content;
@@ -32,12 +32,6 @@
 
       }
 
-    .input5{
-      position: relative;
-      width: max-content;
-
-
-    }
   }
 }
 
@@ -60,14 +54,14 @@
     color:black;
   }
 }
-.logo {
+.ears-logo {
   height: 238px;
   position:absolute;
   top:calc(50% - 119px);
-  left:calc(50% - 101.5px);
+  left:calc(35% - 100px);
 
 }
-.game-2-container-2 {
+.game-2-container-3 {
   max-width: 824px;
   margin: 0px auto;
   position: relative;

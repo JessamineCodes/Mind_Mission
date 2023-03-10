@@ -4,8 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def level_one_challenge
-
+  def dashboard
   end
 
   def level_one_checkpoint
@@ -31,6 +30,9 @@ class PagesController < ApplicationController
     end
     redirect_to level_three_snippet_path
   end
+
+    def level_one_challenge
+    end
 
   def level_one_snippet
 

@@ -2,9 +2,41 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="crack-the-code"
 export default class extends Controller {
-  static targets = ["reward"]
+  static targets = ["reward", "word", "hint", "input", "round"]
+
 
   connect() {
+    this.correctWord = this.#initGame();
+    this.round = 1;
+  }
+
+  showAnswer() {
+    this.wordTarget.innerText = this.correctWord.toUpperCase();
+  }
+
+  checkWord() {
+    let userWord = this.inputTarget.value.toLocaleLowerCase();
+    if (!userWord) {
+      alert("Please enter a word");
+    } else if (userWord !== this.correctWord) {
+      alert(`Oops! ${userWord} is not the correct word!`);
+    } else {
+      alert ("You guessed right!");
+    }
+    // if (userWord !== this.correctWord) return alert(`Oops! ${userWord} is not the correct word!`);
+    // if (userWord === this.correctWord) return alert ("You guessed right!");
+    this.round++;
+    if (this.round <= 3) {
+      this.roundTarget.innerText = this.round;
+      this.correctWord = this.#initGame();
+      console.log(this.correctWord);
+    } else {
+      this.rewardTarget.style.display = "flex"
+    }
+      // alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
+  }
+
+  #initGame() {
     const words = [
       {
         word: "APPLE",
@@ -19,55 +51,27 @@ export default class extends Controller {
         hint: "🍊"
       }
     ];
-
-    const wordText = document.querySelector(".word"),
-    hintText = document.querySelector(".hint span"),
-    inputField = document.querySelector("#user-input"),
-    solutionBtn = document.querySelector(".solution"),
-    checkBtn = document.querySelector(".check"),
-    cheatBtn = document.querySelector(".cheat");
-
-    let correctWord;
-
-    const initGame = () => {
-      // get random object from words
-      let randomObj = words[Math.floor(Math.random() * words.length)];
-      let wordArray = randomObj.word.split("");
-      for (let i = wordArray.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
-      }
-      wordText.innerText = wordArray.join("");
-      hintText.innerText = randomObj.hint;
-      correctWord = randomObj.word.toLowerCase();
-      inputField.value = "";
-      inputField.setAttribute("maxlength", correctWord.length);
+    // get random object from words
+    let randomObj = words[Math.floor(Math.random() * words.length)];
+    let wordArray = randomObj.word.split("");
+    for (let i = wordArray.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
     }
-    initGame();
-
-    const checkWord = () => {
-      let currentRound = 1;
-      const rounds = document.querySelector(".rounds")
-      let userWord = inputField.value.toLocaleLowerCase();
-      if (!userWord) return alert("Please enter a word");
-      if (userWord !== correctWord) return alert(`Oops! ${userWord} is not the correct word!`);
-      // while (currentRound !== 3) {
-      // }
-      rounds.innerText = `${currentRound += 1}/3`
-      // alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
-    }
-
-    const showAnswer = () => {
-      wordText.innerText = correctWord.toUpperCase();
-    }
-
-    const cheatGame = () => {
-      console.log("Cheat button connected")
-      this.rewardTarget.style.display = "flex"
-    }
-
-    cheatBtn.addEventListener("click", cheatGame);
-    solutionBtn.addEventListener("click", showAnswer);
-    checkBtn.addEventListener("click", checkWord);
+    this.wordTarget.innerText = wordArray.join("");
+    this.hintTarget.innerText = randomObj.hint;
+    let correctWord = randomObj.word.toLowerCase();
+    this.inputTarget.value = "";
+    this.inputTarget.setAttribute("maxlength", correctWord.length);
+    return correctWord;
   }
 }
+
+  // const cheatGame = () => {
+  //   console.log("Cheat button connected")
+  //   this.rewardTarget.style.display = "flex"
+  // }
+
+  // cheatBtn.addEventListener("click", cheatGame);
+  // solutionBtn.addEventListener("click", showAnswer);
+  // checkBtn.addEventListener("click", checkWord);

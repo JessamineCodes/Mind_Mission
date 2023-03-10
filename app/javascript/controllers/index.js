@@ -16,3 +16,6 @@ application.register("hello", HelloController)
 
 import RotateDialController from "./rotate_dial_controller"
 application.register("rotate-dial", RotateDialController)
+
+import ConfettiController from "./confetti_controller"
+application.register("confetti", ConfettiController)

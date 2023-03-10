@@ -3,6 +3,11 @@
   <h1>Mind Mission<h1>
   <%= image_tag "squirrel1.png", class:"splash-image"%>
   <h2>Keep Cool at Spy School</h2>
+  <% if user_signed_in? %>
+   <%= link_to "Enter", dashboard_path, class: "button" %>
+  <% else %>
+    <%= link_to "Log In", new_user_session_path, class: "button" %>
+  <% end %>
   <%# <div class="splash-circle">
     <div class="splash-text-container">
       <div class="splash-moving-text">Keep Cool at Spy School</div>

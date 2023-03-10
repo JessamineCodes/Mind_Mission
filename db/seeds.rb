@@ -24,4 +24,7 @@ user4.save!
 user5 = User.new(email: "dilber@test.com", password: "123456", first_name: "Dilbur", level: 3)
 user5.save!
 
-puts "All done! Have at it..."
+user6 = User.new(email: "matilda@test.com", password: "123456", first_name: "Matilda", level: 0)
+user6.save!
+
+puts "All done! Have at it!"

@@ -13,7 +13,7 @@ export default class extends Controller {
     console.log(this.dialTarget)
 
     this.dialTarget.classList.add("rotation-animation")
-    this.buttonTarget.classList.remove("button")
+    // this.buttonTarget.classList.remove("button")
     this.buttonTarget.classList.add("disabled-button")
     this.dialTarget.addEventListener("animationend", (event) => {
       console.log("Animation finished")
@@ -22,5 +22,4 @@ export default class extends Controller {
     // this.dialTarget.style.transform = "rotate(144deg)";
     // this.dialTarget.style.transform = "rotate(144deg)";
   }
-
 }

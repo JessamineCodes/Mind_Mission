@@ -3,17 +3,23 @@
   background: #F4EAD5;
   border: 1px solid #715252;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 8px rgba(187, 187, 187, 0.48);
-  border-radius: 30px;
-  // width: 20%;
+  border-radius: 35px;
+  width: fit-content;
   height: 35px;
   font-family: 'Special Elite';
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px;
   cursor: pointer;
   text-decoration: none;
-  padding: 8px;
+  text-align:center;
+  flex-shrink: 0;
+  padding: 12px 4px 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+
   &:hover{
     animation: shake 0.6s infinite;
   }
@@ -37,8 +43,8 @@
 };
 
 .disabled-button {
-  width: 258px;
-  height: 62px;
+  // width: 258px;
+  // height: 62px;
   box-sizing: border-box;
   background: #F4EAD5;
   border: 1px solid rgba(113, 82, 82, 0.5);
@@ -53,3 +59,7 @@
   border: 1px solid #FBD87D;
   pointer-events: none;
 };
+
+.btn-bg {
+  background: #F4EAD5 !important;
+}

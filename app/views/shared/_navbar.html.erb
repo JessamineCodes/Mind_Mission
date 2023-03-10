@@ -1,7 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-MM">
   <div class="container-fluid d-flex align-items-center">
     <div class="nav-item active d-flex align-items-center">
-      <%= link_to "Dashboard", dashboard_path, class: "button nav-link" %>
+      <% if user_signed_in? && (params[:action] != "dashboard" && params[:action] != "home") %>
+        <%= link_to "Dashboard", dashboard_path, class: "button nav-link" %>
+      <% end %>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

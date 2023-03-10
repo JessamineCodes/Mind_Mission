@@ -1,16 +1,17 @@
 .dashboard-container{
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
   width: 1492px;
-  position: relative;
+  // position: relative;
   margin-right: 40px;
 }
 
 .tree-container{
-  width: 70%;
+  width: 75%;
   height: 570px;
-  position: absolute;
+  position: relative;
   left: -115px;
+  height: 590px;
 }
 
 
@@ -37,22 +38,22 @@ object-fit: contain;
 }
 
 .acorn-1 {
-  top: 36%;
+  top: 37%;
   left: 9%;
 }
 
 .acorn-2 {
-  top: 46%;
+  top: 47%;
   left: 56%;
 }
 
 .acorn-3 {
-  top: 20%;
+  top: 23%;
   left: 80%;
 }
 
 .squirrel-img{
-width: 30%;
+width: 25%;
 bottom: auto;
 position: absolute;
 right: 20px;

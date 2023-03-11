@@ -1,8 +1,32 @@
 
-<div class="splash-container">
-  <h1>Mind Mission<h1>
-  <%= image_tag "squirrel1.png", class:"splash-image"%>
-  <h2>Keep Cool at Spy School</h2>
+<%# <div class="splash-container"> %>
+<div class="splash-page">
+
+  <h1 class="mb-3">Mind Mission<h1>
+  <div class= "splash-page-body">
+
+
+
+    <div class="splash-circle">
+
+      <div class="splash-squirrel-img"></div>
+
+      <div class="splash-text-container">
+      <h2>Keep Cool at Spy School</h2>
+      </div>
+
+    </div>
+
+<script>
+  const text = document.querySelector('.splash-text-container h2')
+  text.innerHTML = text.innerText.split("").map(
+    (character, angle) =>
+    `<span style="transform:rotate(${angle * 5}deg)">${character}</span>`
+  ).join("")
+</script>
+
+</div>
+
   <% if user_signed_in? %>
    <%= link_to "Enter", dashboard_path, class: "button" %>
   <% else %>
@@ -17,4 +41,4 @@
       <div class="splash-moving-text">School</div> %>
     <%# </div>
   </div> %>
-</div>
+<%# </div> %>

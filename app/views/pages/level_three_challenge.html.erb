@@ -1,16 +1,17 @@
 <div class="d-flex justify-content-center">
   <div class="flex-column">
     <div class="d-flex justify-content-center">
-      <h1>Crack the Code</h1>
+      <h1>Solve the Code</h1>
     </div>
-    <p>Time to get your brain whirring! The enemy agents have jumbled up these three important words - unscramble them!</p>
+    <p>When you're stressed it's good to get your brain whirring and focus on a puzzle!</p>
+    <p> The enemy agents have jumbled up these three important words - unscramble them!</p>
     <div data-controller="crack-the-code">
       <div class="d-flex justify-content-center">
         <div class="scramble_game_container">
           <div class="reward" data-crack-the-code-target="reward">
-            <h1>You unlocked a reward!</h1>
+            <h1>Brilliant work!</h1>
             <%= image_tag "reward_placeholder.png" %>
-            <p>This is an amazing spy gadget blahblahblah</p>
+            <p>You've passed level 3 and unlocked a bulletproof umbrella!</p>
             <%= link_to "Great!", level_three_checkpoint_path, class:"button" %>
           </div>
           <div class="game-container">
@@ -24,8 +25,8 @@
         </div>
       </div>
       <div class="buttons d-flex justify-content-center">
-        <button type="button" class="solution button px-3 py-3" data-action="click->crack-the-code#showAnswer" style="margin-right: 15px;">Solution</button>
-        <button type="button" class="check button px-3 py-3" data-action="click->crack-the-code#checkWord" style="margin-left: 15px;">Check</button> <%# when we have only two buttons we will need to change how the margin is applied %>
+        <button type="button" class="solution button px-3 py-3" data-action="click->crack-the-code#showAnswer" style="margin-right: 15px;">Need a clue?</button>
+        <button type="button" class="check button px-3 py-3" data-action="click->crack-the-code#checkWord" style="margin-left: 15px;">Submit!</button> <%# when we have only two buttons we will need to change how the margin is applied %>
       </div>
     </div>
   </div>

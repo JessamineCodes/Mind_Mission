@@ -1,14 +1,13 @@
 <div class="challenge two step five container">
-  <h1>Hone Your Spy Skills</h1>
+  <h1>Hone Your Spy Senses</h1>
 
   <h3>List 1 thing you can taste</h3>
 
-
   <div class="challenge two form" data-controller="disable-button">
     <div class="reward" data-disable-button-target="reward">
-      <h1>You unlocked a reward!</h1>
+      <h1>Well done!</h1>
       <%= image_tag "reward_placeholder.png" %>
-      <p>This is an amazing spy gadget blahblahblah</p>
+      <p>You've passed level 2 and unlocked X-ray sunglasses!</p>
       <%= link_to "Great!", level_two_checkpoint_path, class:"button"%>
     </div>
     <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get, data: {action: "submit->disable-button#openReward"}) do |f| %>

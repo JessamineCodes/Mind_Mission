@@ -56,3 +56,21 @@
   // width: 60%;
   // border: 1px solid red;
 }
+
+.game-3-inputs {
+  input {
+    background-color: $primary;
+    border-radius: 48px;
+    border: none;
+    text-align: left;
+    height: 73px;
+    font-size: 28px;
+    width: 400px;
+    &:focus {
+      background-color: $primary;
+    }
+  }
+  input:focus {
+    outline: none
+  }
+}

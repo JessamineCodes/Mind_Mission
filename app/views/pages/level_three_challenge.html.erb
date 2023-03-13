@@ -4,7 +4,7 @@
       <h1>Solve the Code</h1>
     </div>
     <p>When you're stressed it's good to get your brain whirring and focus on a puzzle!</p>
-    <p> The enemy agents have jumbled up these three important words - unscramble them!</p>
+    <p>The enemy agents have jumbled up these three important words - unscramble them!</p>
     <div data-controller="crack-the-code">
       <div class="d-flex justify-content-center">
         <div class="scramble_game_container">
@@ -17,8 +17,8 @@
           <div class="game-container">
             <p class="word" data-crack-the-code-target="word"></p>
             <p class="hint">Hint: <span data-crack-the-code-target="hint"></span></p>
-            <form action="">
-              <input type="text" id="user-input" name="user-input" placeholder = "Type here..." data-crack-the-code-target="input">
+            <form action="" class="game-2-inputs <%# game-3-inputs %>">
+              <input type="text" id="user-input" name="user-input" placeholder="Type here..." data-crack-the-code-target="input">
             </form>
             <p class="rounds"><span data-crack-the-code-target="round">1</span>/3 </p>
           </div>

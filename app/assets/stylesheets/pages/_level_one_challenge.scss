@@ -57,17 +57,20 @@
     }
 
 // Breathe in and out word animations
-.breathe-text h2 {
+.breathe-text-container h2 {
   color: white;
 }
 
-.breathe-text .in, .breathe-text .out {
-  display:inline
+.breathe-text-container .in, .breathe-text .out {
+  display:inline;
 }
 
-.breathe-text{
+.breathe-text-container {
   position: relative;
-  opacity: 0;
+}
+
+.breathe {
+  opacity: 0; /* make things invisible upon start */
 }
 
 .breathe-text-fade {
@@ -76,10 +79,10 @@
   animation-duration: 30s;
 
  @keyframes breatheTextFade {
-    0% { opacity: 0; }
-    1% { opacity: 1; }
-    99% { opacity: 1; }
-    100% { opacity: 0; }
+  0% { opacity: 0; }
+  1% { opacity: 1; }
+  99% { opacity: 1; }
+  100% { opacity: 0; }
  }
 }
 

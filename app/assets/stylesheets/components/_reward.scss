@@ -12,8 +12,8 @@
     left: 0;
     right: 0;
     position: absolute;
-    width: 450px;
-    height: 325px;
+    width: 550px;
+    height: 450px;
     background: #FFB703;
     box-shadow: 4px 4px 16px rgba(136, 136, 136, 0.5);
     border-radius: 7px;
@@ -22,8 +22,8 @@
 }
 
 .reward img{
-  width: 400px;
-  height: 200px;
+  width: 450px;
+  height: 350px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -32,9 +32,10 @@
   font-family: 'Special Elite';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 40px;
   line-height: 24px;
   color: #3D2B3D;
+  padding-top: 8px;
 }
 
 
@@ -42,8 +43,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 24px;
   color: #3D2B3D;
 }
 

@@ -1,7 +1,7 @@
 <div class="challenge two step five container">
   <h1>Hone Your Spy Senses</h1>
 
-  <h3>List 1 thing you can taste</h3>
+  <h3 style="text-align: center;padding-top:50px;">List 1 thing you can <strong>taste</strong></h3>
 
   <div class="challenge two form" data-controller="disable-button">
     <div class="reward" data-disable-button-target="reward">
@@ -15,14 +15,14 @@
 
         <%= image_tag "mouth.png", class:"mouth-logo" %>
 
-        <div class="bottom-arch game-2-inputs">
+        <div class="mid-arch game-2-inputs">
           <div class="input4">
           <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
           </div>
         </div>
 
         <div class="challenge 2 d-flex justify-content-center mt-2 pt-3">
-            <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button button-challenge-2 btn-bg"%>
+            <%= f.button :submit, "Next", disabled: true, data: {disable_button_target: "button"}, class:"button button-challenge-2 btn-bg"%>
         </div>
     <% end %>
   </div>

@@ -5,15 +5,14 @@
   <p>Do this by focusing on what's around you right now. This is called 'grounding'.</p>
   <br>
 
-  <h3>List 5 things you
-  can see</h3>
+  <h3 style="text-align: center">List 5 things you can <strong>see</strong></h3>
 
   <div class="challenge form mt-6" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_two_path, method: :get) do |f| %>
 
       <div class="game-2-container-1">
 
-        <%= image_tag "eye.png", class:"logo" %>
+        <%= image_tag "eye.png", class:"eye-logo" %>
         <div class="top-arch game-2-inputs">
           <div class="input1">
           <%= f.input :answer1, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
@@ -41,7 +40,7 @@
         </div>
 
         <div class="challenge 2 d-flex justify-content-center mt-4">
-          <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button button-challenge-2 btn-bg"%>
+          <%= f.button :submit, "Next", disabled: true, data: {disable_button_target: "button"}, class:"button button-challenge-2 btn-bg"%>
         </div>
       </div>
     <% end %>

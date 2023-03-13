@@ -69,8 +69,11 @@
   input::placeholder{
     color:black;
   }
+  input:focus {
+    outline: none
+  }
 }
-.logo {
+.eye-logo {
   height: 238px;
   position:absolute;
   top:calc(50% - 119px);

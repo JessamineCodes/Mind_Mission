@@ -41,34 +41,16 @@
   }
 }
 
-.game-2-inputs{
-  input {
-    background-color: $primary;
-    border-radius: 48px;
-    border: none;
-    text-align: center;
-    height: 73px;
-    font-size: 28px;
-    width: 191px;
-    &:focus {
-      background-color: $primary;
-
-
-    }
-  }
-  input::placeholder{
-    color:black;
-  }
-}
-.logo {
+.paw-logo {
   height: 238px;
   position:absolute;
-  top:calc(50% - 119px);
-  left:calc(50% - 101.5px);
+  top:calc(50% - 60px);
+  left:calc(48% - 101.5px);
 
 }
 .game-2-container-2 {
   max-width: 824px;
   margin: 0px auto;
   position: relative;
+  padding-top: 165px;
 }

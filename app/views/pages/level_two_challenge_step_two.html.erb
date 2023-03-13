@@ -1,14 +1,14 @@
 <div class="challenge two step two container">
   <h1>Hone Your Spy Senses</h1>
 
-  <h3>List 4 things you can touch</h3>
+  <h3 style="text-align: center;padding-top:50px;">List 4 things you can <strong>touch</strong></h3>
 
   <div class="challenge form mt-6" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get) do |f| %>
 
       <div class="game-2-container-2">
 
-        <%= image_tag "paw.png", class:"logo" %>
+        <%= image_tag "paw.png", class:"paw-logo" %>
         <div class="mid-arch game-2-inputs">
           <div class="input2">
           <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
@@ -30,7 +30,7 @@
         </div>
 
         <div class="challenge 2 d-flex justify-content-center mt-4">
-            <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button btn-bg py-0 px-1"%>
+            <%= f.button :submit,"Next", disabled: true, data: {disable_button_target: "button"}, class:"button btn-bg py-0 px-1"%>
         </div>
       </div>
     <% end %>

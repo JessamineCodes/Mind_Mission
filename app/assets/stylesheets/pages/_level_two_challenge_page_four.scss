@@ -33,29 +33,10 @@
   }
 }
 
-.game-2-inputs{
-  input {
-    background-color: $primary;
-    border-radius: 48px;
-    border: none;
-    text-align: center;
-    height: 73px;
-    font-size: 28px;
-    width: 191px;
-    &:focus {
-      background-color: $primary;
-
-
-    }
-  }
-  input::placeholder{
-    color:black;
-  }
-}
 .nose-logo {
   height: 238px;
   position:absolute;
-  top:calc(50% - 119px);
+  top:calc(50% - 55px);
   left:calc(50% - 138px);
 
 }
@@ -63,4 +44,5 @@
   max-width: 824px;
   margin: 0px auto;
   position: relative;
+  padding-top: 165px;
 }

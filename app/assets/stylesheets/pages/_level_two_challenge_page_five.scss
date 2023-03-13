@@ -1,9 +1,8 @@
 .game-2-container-5 {
 
-  .bottom-arch {
+    .mid-arch {
+    justify-content: center;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     .input4{
       position: relative;
       width: max-content;
@@ -12,41 +11,22 @@
     }
 }
 
-.game-2-inputs{
-  input {
-    background-color: $primary;
-    border-radius: 48px;
-    border: none;
-    text-align: center;
-    height: 73px;
-    font-size: 28px;
-    width: 191px;
-    &:focus {
-      background-color: $primary;
-
-
-    }
-  }
-  input::placeholder{
-    color:black;
-  }
-}
 .mouth-logo {
   height: 238px;
   position: absolute;
-  top:calc(50% - 119px);
-  left:calc(50% - 138px);
+  top:calc(40% - 5px);
+  left:calc(50% - 200px);
 
 }
 .game-2-container-5 {
-  max-width: 824px;
   margin: 0px auto;
   position: relative;
   height: 300px;
+  padding-top: 65px;
 }
 
 .game-2-container-5 .button {
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 150%;
+  left: 48%;
 }

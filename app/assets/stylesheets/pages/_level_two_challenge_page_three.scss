@@ -9,23 +9,14 @@
       position:relative;
       width: max-content;
       justify-content: left;
-
-
     }
 
     .input3{
       position: relative;
       width: max-content;
       justify-content: right;
-
-
     }
-  }
 
-  .bottom-arch {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     .input4{
       position: relative;
       width: max-content;
@@ -33,31 +24,14 @@
       }
 
   }
+
+
 }
 
-.game-2-inputs{
-  input {
-    background-color: $primary;
-    border-radius: 48px;
-    border: none;
-    text-align: center;
-    height: 73px;
-    font-size: 28px;
-    width: 191px;
-    &:focus {
-      background-color: $primary;
-
-
-    }
-  }
-  input::placeholder{
-    color:black;
-  }
-}
 .ears-logo {
   height: 238px;
   position:absolute;
-  top:calc(50% - 119px);
+  top:calc(40% - 3px);
   left:calc(35% - 100px);
 
 }
@@ -65,4 +39,11 @@
   max-width: 824px;
   margin: 0px auto;
   position: relative;
+  padding-top:165px;
+}
+
+.game-2-container-3 .button {
+  position: absolute;
+  top: 130%;
+  left: 45%;
 }

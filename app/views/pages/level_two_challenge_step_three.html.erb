@@ -1,12 +1,12 @@
 <div class="challenge two step three container">
   <h1>Hone Your Spy Senses</h1>
 
-  <h3>List 3 things you can hear</h3>
+  <h3 style="text-align: center;padding-top:50px;">List 3 things you can <strong>hear</strong></h3>
 
   <div class="challenge two hear form" data-controller="disable-button">
     <%= simple_form_for(:quiz, url:level_two_challenge_step_four_path, method: :get) do |f| %>
 
-      <div class="game-2-container-3">
+      <div class="game-2-container-3 justify-content:center">
 
       <%= image_tag "ears.png", class:"ears-logo" %>
         <div class="mid-arch game-2-inputs">
@@ -17,16 +17,14 @@
           <div class="input3">
           <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
           </div>
-        </div>
 
-        <div class="bottom-arch game-2-inputs">
           <div class="input4">
           <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
           </div>
         </div>
 
         <div class="challenge 2 d-flex justify-content-center mt-4">
-            <%= f.button :submit, disabled: true, data: {disable_button_target: "button"}, class:"button btn-bg py-0 px-1"%>
+            <%= f.button :submit,"Next", disabled: true, data: {disable_button_target: "button"}, class:"button btn-bg py-0 px-1"%>
         </div>
     <% end %>
   </div>

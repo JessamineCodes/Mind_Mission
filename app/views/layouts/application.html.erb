@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mind Mission</title>
+    <title>Mind Mission: Keep Cool at Spy School</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= favicon_link_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+  <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= DEFAULT_META["meta_title"] %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= DEFAULT_META["meta_image"] %>" />
+    <meta property="og:description" content="<%= DEFAULT_META["meta_description"] %>" />
+    <meta property="og:site_name" content="<%= DEFAULT_META["meta_title"] %>" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:title" content="<%= DEFAULT_META["meta_title"] %>">
+    <meta name="twitter:description" content="<%= DEFAULT_META["meta_description"] %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:image:src" content="<%= DEFAULT_META["meta_image"] %>">
+
   </head>
 
   <body><%= render "shared/navbar" %>

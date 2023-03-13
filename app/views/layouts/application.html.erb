@@ -15,7 +15,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= request.original_url %>" />
     <%# <meta property="og:image" content="<%= DEFAULT_META["meta_image"] %>
-    <meta property="og:image" content="https://{{ 'cover.png' | asset_url }}" />
+    <meta property="og:image" content="https://{{ <%= DEFAULT_META["meta_image"] %> | asset_url }}" />
     <meta property="og:description" content="<%= DEFAULT_META["meta_description"] %>" />
     <meta property="og:site_name" content="<%= DEFAULT_META["meta_title"] %>" />
 

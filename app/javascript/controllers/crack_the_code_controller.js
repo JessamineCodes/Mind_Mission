@@ -4,7 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["reward", "word", "hint", "input", "round"]
 
-
   connect() {
     this.correctWord = this.#initGame();
     this.round = 1;
@@ -39,16 +38,16 @@ export default class extends Controller {
   #initGame() {
     const words = [
       {
-        word: "APPLE",
-        hint: "🍎"
+        word: "INTELLIGENCE",
+        hint: "secret information gathered by spies"
       },
       {
-        word: "BANANA",
-        hint: "🍌"
+        word: "FINGERPRINT",
+        hint: "the pattern you leave behind on a surface after touching it"
       },
       {
-        word: "ORANGE",
-        hint: "🍊"
+        word: "ESPIONAGE",
+        hint: "another word for spying - rhymes with 'camouflage'"
       }
     ];
     // get random object from words

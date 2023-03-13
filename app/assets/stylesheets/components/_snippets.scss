@@ -33,7 +33,7 @@
   position: absolute;
   font-size: 80px;
   line-height: 1;
-  color: #000000;
+  color: $accent;
   font-style: normal;
 }
 
@@ -71,15 +71,19 @@
 }
 
 .snippet-text-1 {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .snippet-text-2 {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .snippet-text-3 {
-  font-size: 16px;
+  font-size: 24px;
+}
+
+.snippet-text-1 strong, .snippet-text-2 strong, .snippet-text-3 strong {
+  color: $accent;
 }
 
 .snippet-heading {

@@ -69,6 +69,9 @@
   input::placeholder{
     color:black;
   }
+  input:focus {
+    outline: none
+  }
 }
 .logo {
   height: 238px;

@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="rotate-dial"
 export default class extends Controller {
-  static targets = ["dial", "button", "reward"]
+  static targets = ["dial", "button", "reward", "breatheInText", "breatheOutText", "breatheText" ]
 
   connect() {
     console.log(this.dialTarget)
@@ -13,6 +13,9 @@ export default class extends Controller {
     console.log(this.dialTarget)
 
     this.dialTarget.classList.add("rotation-animation")
+    this.breatheInTextTarget.classList.add("breathe-in-fade-in-and-out")
+    this.breatheOutTextTarget.classList.add("breathe-out-fade-in-and-out")
+    this.breatheTextTarget.classList.add("breathe-text-fade")
     // this.buttonTarget.classList.remove("button")
     this.buttonTarget.classList.add("disabled-button")
     this.dialTarget.addEventListener("animationend", (event) => {

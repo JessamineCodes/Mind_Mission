@@ -12,8 +12,16 @@
     </div>
     <button class="button" data-rotate-dial-target="button" data-action="click->rotate-dial#rotate" >Start!</button>
     <div class="breathing-dial" >
+      <div class = "breathe-text d-flex flex-column align-items-center">
+        <h2 class="breathe" data-rotate-dial-target="breatheText">Breathe</h2>
+        <div class="changing-text">
+          <h2 class="in" data-rotate-dial-target="breatheInText">in</h2>
+          <h2 class="out" data-rotate-dial-target="breatheOutText">out</h2>
+        </div>
+      </div>
       <%= image_tag "level_one_background_wheel.png" %>
-      <%= image_tag "level_one_foreground_wheel.png", class:"rotating_wheel", data:{ rotate_dial_target: "dial"} %>
+      <%= image_tag "level_one_safe_rotating_dial.png", class:"rotating_wheel", data:{ rotate_dial_target: "dial"} %>
+      <%= image_tag "level_one_challenge_safe_background.png" %>
     </div>
   </div>
 </div>

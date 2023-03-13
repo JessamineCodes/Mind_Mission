@@ -1,61 +1,162 @@
+//Positioning safe elements and dial rotation animation
 .breathing-dial{
+  margin-top: 1rem;
   position: relative;
   display: inline;
-  width: 397px;
+  width: 598px;
   top: 0;
   left: 0;
-  img:first-child {
-    position: relative;
-    top: 0;
-    left: 0;
+
+  img:nth-child(3) {
+    position: absolute;
+    top: 72px;
+    left: 142px;
+    z-index: 2;
+  }
+
+  img:nth-child(2) {
+    position: absolute;
+    top: 27px;
+    right: 105px;
+    // filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
   }
   img:last-child {
     position: absolute;
-    top: 44px;
-    right: 42px;
-
+    z-index: -1;
+    top: 0px;
+    left: 0px;
   }
+  div:first-child {
+    position: absolute;
+    z-index: 5;
+    right: 240px;
+    top: 190px;
+  }
+
   .rotation-animation {
-    animation: breathing 60s;
-    animation-duration: 60s;
+    animation: breathing 30s;
+    animation-duration: 30s;
 
     @keyframes breathing {
       0% {
         rotate: 0deg; }
-      7% {
+      14% {
         rotate: 144deg; }
-      17% {
+      33% {
         rotate: -72deg; }
-      24%  {
+      47%  {
         rotate: 72deg; }
-      34% {
+      67% {
         rotate: -144deg; }
-      41% {
+      80% {
         rotate: 0deg; }
-      48% {
-        rotate: -216deg; }
-      58% {
-        rotate: -72deg; }
-      65% {
-        rotate: -288deg; }
-      75% {
-        rotate: -144deg; }
-      85% {
-        rotate: -360deg; }
-      92% {
-        rotate: -216deg; }
       100% {
-        rotate: -432deg; }
-          }
-        }
-  }
+        rotate: -216deg; }
+       }
+     }
+    }
 
+// Breathe in and out word animations
+.breathe-text h2 {
+  color: white;
+}
+
+.breathe-text .in, .breathe-text .out {
+  display:inline
+}
+
+.breathe-text{
+  position: relative;
+  opacity: 0;
+}
+
+.breathe-text-fade {
+  animation: breatheTextFade 30s;
+  animation-fill-mode: forwards;
+  animation-duration: 30s;
+
+ @keyframes breatheTextFade {
+    0% { opacity: 0; }
+    1% { opacity: 1; }
+    99% { opacity: 1; }
+    100% { opacity: 0; }
+ }
+}
+
+.changing-text {
+  position: absolute;
+  top: 50px;
+  left: 35px;
+  text-align: center;
+}
+
+.in, .out{
+  position: absolute;
+}
+
+
+// IN
+.in {
+  opacity: 0; /* make things invisible upon start */
+}
+
+.breathe-in-fade-in-and-out {
+  animation: breatheInFadeIn 30s;
+  animation-fill-mode: forwards;
+  animation-duration:30s;
+
+ @keyframes breatheInFadeIn {
+  0% {opacity: 0; }
+  1% { opacity: 1;}
+  13% {opacity: 1; }
+  14% {opacity: 0;}
+  33% {opacity: 0; }
+  34% {opacity: 1;}
+  46% {opacity: 1; }
+  47% {opacity: 0;}
+  66% {opacity: 0; }
+  67% {opacity: 1;}
+  79% {opacity: 1; }
+  80% {opacity: 0; }
+  100% {opacity: 0; }
+}
+}
+
+// OUT
+.out {
+  opacity: 0; /* make things invisible upon start */
+}
+
+.breathe-out-fade-in-and-out {
+  animation: breatheOutFadeIn 30s;
+    animation-fill-mode: forwards;
+    animation-duration:30s;
+
+ @keyframes breatheOutFadeIn {
+  0% {opacity:0; }
+  14% {opacity: 0; }
+  15% {opacity: 1; }
+  32% {opacity: 1; }
+  33% {opacity: 0; }
+  47% {opacity: 0; }
+  48% {opacity: 1; }
+  66% {opacity: 1; }
+  67% {opacity: 0; }
+  80% {opacity: 0; }
+  81% {opacity: 1; }
+  99% {opacity: 1; }
+  100% {opacity: 0; }
+ }
+}
+
+//Positioning on page
 .container-challenge-one{
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .challenge-and-button {
   display: flex;

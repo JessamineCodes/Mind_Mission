@@ -7,18 +7,18 @@
   width: fit-content;
   height: 35px;
   font-family: 'Special Elite';
-  font-size: 28px;
+  font-size: 29px;
   font-style: normal;
   font-weight: 400;
   cursor: pointer;
   text-decoration: none;
   text-align:center;
   flex-shrink: 0;
-  padding: 12px 4px 4px;
+  padding: 25px 20px 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  
+
 
 
   &:hover{
@@ -41,7 +41,7 @@
       transform: translate(-1px, 1px) rotate(-1deg);
     }
   }
-};
+}
 
 .disabled-button {
   // width: 258px;
@@ -59,8 +59,14 @@
   color: rgba(113, 82, 82, 0.22);
   border: 1px solid #FBD87D;
   pointer-events: none;
-};
+  padding: 40px 30px 30px;
+}
 
 .btn-bg {
   background: #F4EAD5 !important;
+}
+
+.button-challenge-2 {
+  padding: 8px 20px 3px;
+  height: auto;
 }

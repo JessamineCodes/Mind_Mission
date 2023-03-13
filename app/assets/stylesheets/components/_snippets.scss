@@ -7,20 +7,31 @@
   height: calc(100vh - 66px);
 }
 
+// .testimonial {
+//   margin-bottom: 20px;
+// }
+
 .testimonial blockquote {
   margin: 10px 10px 0;
   background: #FFB703;
-  padding: 20px 60px;
+  padding: 20px 70px;
   position: relative;
   border: none;
   border-radius: 50%;
   font-style: italic;
-  width: 600px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.snippet-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .testimonial .text-wrapper {
@@ -31,33 +42,33 @@
 .testimonial blockquote:after {
   content: "\201C";
   position: absolute;
-  font-size: 80px;
+  font-size: 200px;
   line-height: 1;
   color: $accent;
   font-style: normal;
 }
 
 .testimonial blockquote:before {
-  top: 70px;
-  left: 50px;
+  top: 50px;
+  left: 40px;
 }
 
 .testimonial blockquote:after {
   content: "\201D";
-  right: 70px;
-  bottom: 50px;
+  right: 40px;
+  bottom: -60px;
 }
 
 .testimonial .triangle {
-  width: 10px;
-  height: 10px;
+  width: 0;
+  height: 0;
   border-left: 0 solid transparent;
-  border-right: 60px solid transparent;
-  border-top: 60px solid #FFB703;
+  border-right: 70px solid transparent;
+  border-top: 90px solid #FFB703;
   margin: 0 0 0 60px;
   transform: rotate(90deg);
   position: relative;
-  top: -230px;
+  top: -250px;
   left: -100px;
 }
 

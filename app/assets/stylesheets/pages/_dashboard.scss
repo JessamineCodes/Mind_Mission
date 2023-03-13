@@ -7,8 +7,7 @@
 }
 
 .tree-container{
-  width: 75%;
-  height: 570px;
+  width: 1080px;
   position: relative;
   left: -115px;
   height: 590px;
@@ -38,18 +37,35 @@ object-fit: contain;
 }
 
 .acorn-1 {
-  top: 37%;
-  left: 9%;
+  top: 53%;
+  left: 194px;
+  width: 200px;
+  height: auto;
+
+  img {
+    width: 100%;
+  }
 }
 
 .acorn-2 {
-  top: 47%;
-  left: 56%;
+  top: 56%;
+  left: 440px;
+  width: 200px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .acorn-3 {
-  top: 23%;
-  left: 80%;
+  top: 24%;
+  left: 900px;
+  width: 200px;
+
+  img {
+    width: 100%;
+  }
+
 }
 
 .squirrel-img{
@@ -57,21 +73,11 @@ width: 25%;
 bottom: auto;
 position: absolute;
 right: 20px;
-top: auto;
+top: 30%;
 
 img {
   width: 100%;
-  height: 590px;
+  height: 700px;
   object-fit: contain;
 }
 }
-
-
-
-
-// squirrel-img{
-// width: 100%;
-// position: absolute;
-// top: 30px;
-// right: 100px;
-// align-content: center;

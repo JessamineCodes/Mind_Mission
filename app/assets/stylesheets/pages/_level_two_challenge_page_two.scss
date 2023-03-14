@@ -1,4 +1,17 @@
 .game-2-container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px auto;
+  position: relative;
+  padding: 40px 0 40px;
+  margin-bottom: 20px;
+
+  .game-wrapper {
+    width: 825px;
+    height: 400px;
+  }
 
   .mid-arch {
     display: flex;
@@ -43,14 +56,8 @@
 
 .paw-logo {
   height: 238px;
-  position:absolute;
-  top:calc(50% - 60px);
+  position: absolute;
+  top:calc(50% - 140px);
   left:calc(48% - 101.5px);
 
-}
-.game-2-container-2 {
-  max-width: 824px;
-  margin: 0px auto;
-  position: relative;
-  padding-top: 165px;
 }

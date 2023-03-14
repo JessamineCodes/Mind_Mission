@@ -13,13 +13,15 @@
     <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get, data: {action: "submit->disable-button#openReward"}) do |f| %>
       <div class="game-2-container-5">
 
-        <%= image_tag "mouth.png", class:"mouth-logo lvl2-icon-animation" %>
 
-        <div class="mid-arch game-2-inputs">
-          <div class="input4">
-          <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+      <div class="game-wrapper">
+          <%= image_tag "mouth.png", class:"mouth-logo lvl2-icon-animation" %>
+          <div class="mid-arch game-2-inputs">
+            <div class="input4">
+            <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
           </div>
-        </div>
+      </div>
 
         <div class="challenge 2 d-flex justify-content-center mt-2 pt-3">
             <%= f.button :submit, "Next", disabled: true, data: {disable_button_target: "button"}, class:"button button-challenge-2 btn-bg"%>

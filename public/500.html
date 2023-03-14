@@ -3,15 +3,64 @@
 <head>
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
+    background-color: #FBD87D;
     color: #2E2F30;
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
   }
 
+  .button {
+  box-sizing: border-box;
+  background: #F4EAD5;
+  border: 1px solid #715252;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 8px rgba(187, 187, 187, 0.48);
+  border-radius: 35px;
+  width: fit-content;
+  height: 35px;
+  font-family: 'Special Elite';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  text-align:center;
+  flex-shrink: 0;
+  padding: 12px 4px 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+  .button:hover{
+    animation: shake 0.6s infinite;
+  }
+  @keyframes shake{
+    0%{
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    25%{
+      transform: translate(1px, 1px) rotate(1deg);
+    }
+    50%{
+      transform: translate(-1px, -1px) rotate(-1deg);
+    }
+    75%{
+      transform: translate(2px, -1px) rotate(2deg);
+    }
+    100%{
+      transform: translate(-1px, 1px) rotate(-1deg);
+    }
+  }
+
+
+/*
   .rails-default-error-page div.dialog {
     width: 95%;
     max-width: 33em;
@@ -50,7 +99,7 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  } */
   </style>
 </head>
 
@@ -58,9 +107,9 @@
   <!-- This file lives in public/500.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <img src="500_error_contents.png">
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <button type="button" class="button">Back to Dashboard</button>
   </div>
 </body>
 </html>

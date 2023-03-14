@@ -6,7 +6,11 @@
   <div class="challenge-and-button" data-controller="rotate-dial">
     <div class="reward" data-rotate-dial-target="reward">
       <h1>Good job!</h1>
-      <%= image_tag "jetpack_reward.png" %>
+
+      <div class="reward-background">
+        <%= image_tag "jetpack_reward.png" %>
+      </div>
+
       <p>You've passed level 1 and unlocked a jetpack!</p>
       <%= link_to "Great!", level_one_checkpoint_path, class:"button"%>
     </div>

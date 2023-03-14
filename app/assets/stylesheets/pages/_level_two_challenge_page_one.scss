@@ -53,7 +53,7 @@
 
 .game-2-inputs{
     animation: gelatine 0.5s;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
 
   @keyframes gelatine {
     from, to { transform: scale(1, 1); }

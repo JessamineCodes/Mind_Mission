@@ -36,7 +36,7 @@ object-fit: contain;
 
 .acorn-next-level {
   transform-origin: top center;
-  animation: swing 6s ease infinite;
+  animation: swing 10s ease infinite;
   &:hover {
     transform-origin: top center;
     animation: swing 2s ease infinite;

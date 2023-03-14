@@ -1,0 +1,39 @@
+.parent-dashboard h2 {
+  font-family: 'Livvic';
+  font-size: 48px;
+  // color: $accent;
+}
+
+.level-card-unlocked {
+  width: 1050px;
+  height: 105px;
+  border-radius: 7px;
+  background-color: $primary;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.level-card-locked {
+  width: 1050px;
+  height: 105px;
+  border-radius: 7px;
+  background-color: #3d2b3d32;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.triangle-unlocked {
+  position: absolute;
+  top: 40px;
+  right: 48px;
+}
+
+.triangle-unlocked-open {
+  transform: rotate(-180deg);
+}
+
+// .level-card-lvl-and-icon {
+
+// }

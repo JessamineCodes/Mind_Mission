@@ -1,5 +1,10 @@
 <h1>Welcome, <%= current_user.first_name %>'s parent!</h1>
-<div class="container">
-  <div class="level-card">
+<div class="parent-dashboard container d-flex justify-content-center">
+  <div class="level-card-unlocked">
+    <div class="level-card-lvl-and-icon align-items-center d-flex">
+      <%= image_tag "PD_lvl_1_icon.png", class:"pd_icon_img" %>
+      <h2>Level One</h2>
+    </div>
+    <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked" %>
   </div>
 </div>

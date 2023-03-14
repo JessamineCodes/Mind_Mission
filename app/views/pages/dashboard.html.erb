@@ -5,7 +5,7 @@
     <%# <p>Click on the light question mark to start your next super secret spy challenge....<p> %>
   </div>
 
-  <div class="mt-5 d-flex align-items-center">
+  <div class="mt-3 d-flex align-items-center">
     <div class="tree-container">
       <%= image_tag "tree branch.png", class:"tree" %>
       <div class="acorn acorn-1">
@@ -46,7 +46,17 @@
         <% end %>
       </div>
     </div>
+
   <div class="squirrel-img">
-    <%= image_tag "Original Sammy" , class:"squirrel" %>
+   <% if current_user.level == 0 %>
+      <%= image_tag  "Original Sammy.png", class:"squirrel" %>
+    <% elsif current_user.level== 1%>
+      <%= image_tag "Sammy Chal 1.png", class:"squirrel" %>
+    <% elsif current_user.level == 2 %>
+      <%= image_tag "Sammy Chal 2.png", class:"squirrel" %>
+    <% else %>
+      <%= image_tag "Sammy Chal 3.png", class:"squirrel" %>
+    <% end %>
+    </div>
   </div>
 </div>

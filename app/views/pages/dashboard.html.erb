@@ -34,7 +34,17 @@
         <% end %>
       </div>
     </div>
+
   <div class="squirrel-img">
-    <%= image_tag "Original Sammy" , class:"squirrel" %>
+   <% if current_user.level == 0 %>
+      <%= image_tag  "Original Sammy.png", class:"squirrel" %>
+    <% elsif current_user.level== 1%>
+      <%= image_tag "Sammy Chal 1.png", class:"squirrel" %>
+    <% elsif current_user.level == 2 %>
+      <%= image_tag "Sammy Chal 2.png", class:"squirrel" %>
+    <% else %>
+      <%= image_tag "Sammy Chal 3.png", class:"squirrel" %>
+    <% end %>
+    </div>
   </div>
 </div>

@@ -6,6 +6,10 @@
     <p>When you're stressed it's good to get your brain whirring and focus on a puzzle!</p>
     <p>The enemy agents have jumbled up these three important words - unscramble them!</p>
     <div data-controller="crack-the-code">
+      <div class="game-3-alert-container" data-crack-the-code-target="alert">
+        <span class="close-btn" data-action="click->crack-the-code#closeAlert">&times;</span>
+        <p class="game-alert" data-crack-the-code-target="alertText"></p>
+      </div>
       <div class="d-flex justify-content-center">
         <div class="scramble_game_container">
           <div class="reward" data-crack-the-code-target="reward">
@@ -16,7 +20,7 @@
           </div>
           <div class="game-container">
             <p class="word" data-crack-the-code-target="word"></p>
-            <p class="hint">Hint: <span data-crack-the-code-target="hint"></span></p>
+            <p class="hint"><span class="hint-heading">Hint</span>: <span data-crack-the-code-target="hint"></span></p>
             <form action="" class="game-3-inputs <%# game-3-inputs %>">
               <input type="text" id="user-input" name="user-input" placeholder="Type here..." data-crack-the-code-target="input">
             </form>

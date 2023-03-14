@@ -14,7 +14,7 @@
             <%= link_to (image_tag "jetpack.png"), level_one_challenge_path %>
           </div>
         <% else %>
-          <div class="acorn-clickable">
+          <div class="acorn-next-level">
             <%= link_to (image_tag "question mark light.png"), level_one_challenge_path %>
           </div>
         <% end %>
@@ -25,7 +25,7 @@
             <%= link_to (image_tag "glasses.png"), level_two_challenge_step_one_path %>
           </div>
         <% elsif current_user.level == 1 %>
-          <div class="acorn-clickable">
+          <div class="acorn-next-level">
             <%= link_to (image_tag "question mark light.png"), level_two_challenge_step_one_path %>
           </div>
         <% else %>
@@ -38,7 +38,7 @@
             <%= link_to (image_tag "umbrella.png"),  level_three_challenge_path %>
           </div>
         <% elsif current_user.level == 2 %>
-          <div class="acorn-clickable">
+          <div class="acorn-next-level">
             <%= link_to (image_tag "question mark light.png"),  level_three_challenge_path %>
           </div>
         <% else %>

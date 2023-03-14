@@ -7,25 +7,26 @@
     <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get) do |f| %>
 
       <div class="game-2-container-2">
+        <div class="game-wrapper">
+          <%= image_tag "paw.png", class:"paw-logo" %>
+          <div class="mid-arch game-2-inputs">
+            <div class="input2">
+            <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
 
-        <%= image_tag "paw.png", class:"paw-logo" %>
-        <div class="mid-arch game-2-inputs">
-          <div class="input2">
-          <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            <div class="input3">
+            <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
           </div>
 
-          <div class="input3">
-          <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-        </div>
+          <div class="bottom-arch game-2-inputs">
+            <div class="input4">
+            <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
 
-        <div class="bottom-arch game-2-inputs">
-          <div class="input4">
-          <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-
-          <div class="input5">
-          <%= f.input :answer5, as: :string,label:false,placeholder:"Type here",input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            <div class="input5">
+            <%= f.input :answer5, as: :string,label:false,placeholder:"Type here",input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
           </div>
         </div>
 

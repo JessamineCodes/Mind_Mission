@@ -1,8 +1,8 @@
 <div class="challenge two step one container">
   <h1>Hone Your Spy Senses</h1>
 
-  <p>Spies need to stay cool and stay alert! </p>
-  <p>Do this by focusing on what's around you right now. This is called 'grounding'.</p>
+  <p class="mb-0">Spies need to stay cool and stay alert! </p>
+  <p class="mb-0">Do this by focusing on <span>what's around you right now</span>. This is called 'grounding'.</p>
   <br>
 
   <h3 style="text-align: center">List 5 things you can <strong>see</strong></h3>
@@ -11,35 +11,36 @@
     <%= simple_form_for(:quiz, url:level_two_challenge_step_two_path, method: :get) do |f| %>
 
       <div class="game-2-container-1">
+        <div class="game-wrapper">
+          <%= image_tag "eye.png", class:"eye-logo" %>
+          <div class="top-arch game-2-inputs">
+            <div class="input1">
+            <%= f.input :answer1, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"} %>
+            </div>
+          </div>
 
-        <%= image_tag "eye.png", class:"eye-logo" %>
-        <div class="top-arch game-2-inputs">
-          <div class="input1">
-          <%= f.input :answer1, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"} %>
+          <div class="mid-arch game-2-inputs">
+            <div class="input2">
+            <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
+
+            <div class="input3">
+            <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
+          </div>
+
+          <div class="bottom-arch game-2-inputs">
+            <div class="input4">
+            <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
+
+            <div class="input5">
+            <%= f.input :answer5, as: :string,label:false,placeholder:"Type here",input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+            </div>
           </div>
         </div>
 
-        <div class="mid-arch game-2-inputs">
-          <div class="input2">
-          <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-
-          <div class="input3">
-          <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-        </div>
-
-        <div class="bottom-arch game-2-inputs">
-          <div class="input4">
-          <%= f.input :answer4, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-
-          <div class="input5">
-          <%= f.input :answer5, as: :string,label:false,placeholder:"Type here",input_html: {"data-action": "change->disable-button#enableButton", "data-disable-button-target": "input"}  %>
-          </div>
-        </div>
-
-        <div class="challenge 2 d-flex justify-content-center mt-4">
+        <div class="challenge 2 d-flex justify-content-center mt-2">
           <%= f.button :submit, "Next", disabled: true, data: {disable_button_target: "button"}, class:"button button-challenge-2 btn-bg"%>
         </div>
       </div>

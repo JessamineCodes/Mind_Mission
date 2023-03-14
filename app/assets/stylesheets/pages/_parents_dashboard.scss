@@ -1,7 +1,22 @@
+// General styling
+.parent-dashboard {
+  display: flex;
+}
+
 .parent-dashboard h2 {
   font-family: 'Livvic';
   font-size: 48px;
-  // color: $accent;
+}
+
+.parent-dashboard p {
+  font-family: 'Livvic';
+  font-size: 20px;
+}
+
+// Level cards
+
+.PD-card {
+  margin-bottom: 16px;
 }
 
 .level-card-unlocked {
@@ -13,6 +28,10 @@
   display: flex;
   align-items: center;
 }
+.level-card-unlocked h2 {
+  color: $accent;
+}
+
 
 .level-card-locked {
   width: 1050px;
@@ -34,6 +53,60 @@
   transform: rotate(-180deg);
 }
 
-// .level-card-lvl-and-icon {
+// Dropdown card styling
 
-// }
+  .dropdown-card {
+    width: 1050px;
+    height: 276px;
+    border-radius: 0 0 7px 7px;
+    background-color: #ffb8038a;
+    display: none; //currently not working ad inheriting flex from .parent-dashboard
+  }
+
+  .dropdown-info {
+    box-sizing: border-box;
+    width: 501px;
+    margin: 16px;
+    height: 260px;
+    position: relative;
+  }
+
+  .dropdown-info h2 {
+    font-size: 24px;
+  }
+
+  .dropdown-info p {
+    text-align: left;
+  }
+
+  .dropdown-link {
+    box-sizing: border-box;
+    background: #F4EAD5;
+    border: 1px solid #715252;
+    color: $secondary;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 8px rgba(187, 187, 187, 0.48);
+    border-radius: 35px;
+    width: fit-content;
+    height: 25px;
+    font-family: 'Livvic';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    text-align:center;
+    flex-shrink: 0;
+    padding: 8px 8px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin-top: 0;
+    position: absolute;
+    bottom: 24px;
+
+    &:hover{
+      color: $primary;
+      transform: translate(0px, -5px);
+    }
+  }

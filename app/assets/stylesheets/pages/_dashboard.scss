@@ -23,17 +23,20 @@ object-fit: contain;
   position: absolute;
   // top: 0px;
   // z-index: -1;
+}
+
+.acorn-clickable {
   &:hover {
-      transform-origin: top center;
-      animation: swing 2s ease infinite;
-    @keyframes swing {
-      20% { transform: rotate(15deg); }
-      40% { transform: rotate(-10deg); }
-      60% { transform: rotate(5deg); }
-      80% { transform: rotate(-5deg); }
-      100% { transform: rotate(0deg); }
-    }
+    transform-origin: top center;
+    animation: swing 2s ease infinite;
+  @keyframes swing {
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
   }
+}
 }
 
 .acorn-1 {

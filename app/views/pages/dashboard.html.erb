@@ -10,25 +10,37 @@
       <%= image_tag "tree branch.png", class:"tree" %>
       <div class="acorn acorn-1">
         <% if current_user.level >= 1 %>
-          <%= link_to (image_tag "jetpack.png"), level_one_challenge_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "jetpack.png"), level_one_challenge_path %>
+          </div>
         <% else %>
-          <%= link_to (image_tag "question mark light.png"), level_one_challenge_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "question mark light.png"), level_one_challenge_path %>
+          </div>
         <% end %>
       </div>
       <div class="acorn acorn-2">
         <% if current_user.level >=2 %>
-          <%= link_to (image_tag "glasses.png"), level_two_challenge_step_one_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "glasses.png"), level_two_challenge_step_one_path %>
+          </div>
         <% elsif current_user.level == 1 %>
-          <%= link_to (image_tag "question mark light.png"), level_two_challenge_step_one_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "question mark light.png"), level_two_challenge_step_one_path %>
+          </div>
         <% else %>
           <%= image_tag "question mark dark.png" %>
         <% end %>
       </div>
       <div class="acorn acorn-3">
         <% if current_user.level >= 3 %>
-          <%= link_to (image_tag "umbrella.png"),  level_three_challenge_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "umbrella.png"),  level_three_challenge_path %>
+          </div>
         <% elsif current_user.level == 2 %>
-          <%= link_to (image_tag "question mark light.png"),  level_three_challenge_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "question mark light.png"),  level_three_challenge_path %>
+          </div>
         <% else %>
           <%= image_tag "question mark dark.png" %>
         <% end %>

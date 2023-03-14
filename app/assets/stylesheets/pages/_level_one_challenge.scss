@@ -1,3 +1,6 @@
+// Styling to explanation text
+
+
 //Positioning safe elements and dial rotation animation
 .breathing-dial{
   margin-top: 1rem;
@@ -160,6 +163,9 @@
   align-items: center;
 }
 
+.container-challenge-one strong {
+  color: $accent;
+}
 
 .challenge-and-button {
   display: flex;

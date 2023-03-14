@@ -9,14 +9,13 @@
 
       <div class="game-2-container-4">
       <div class="game-wrapper">
-        <%= image_tag "nose.png", class:"nose-logo" %>
+        <%= image_tag "nose.png", class:"nose-logo lvl2-icon-animation" %>
           <div class="mid-arch game-2-inputs">
             <div class="input2">
-            <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+              <%= f.input :answer2, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
             </div>
-
             <div class="input3">
-            <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
+              <%= f.input :answer3, as: :string,label:false,placeholder:"Type here", input_html: {"data-action": "mouseout->disable-button#enableButton", "data-disable-button-target": "input"}  %>
             </div>
           </div>
         </div>

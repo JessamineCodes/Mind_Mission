@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="crack-the-code"
 export default class extends Controller {
-  static targets = ["reward", "word", "hint", "input", "round"]
+  static targets = ["reward", "word", "hint", "input", "round", "alert", "alertText"]
 
   connect() {
     this.correctWord = this.#initGame();
@@ -16,23 +16,30 @@ export default class extends Controller {
   checkWord() {
     let userWord = this.inputTarget.value.toLocaleLowerCase();
     if (!userWord) {
-      alert("Please enter a word");
+      this.alertTextTarget.innerText = "Please enter a word"
+      this.alertTarget.style.display = "block"
     } else if (userWord !== this.correctWord) {
-      alert(`Oops! ${userWord} is not the correct word!`);
+      this.alertTextTarget.innerText = `Oops! ${userWord} is not the correct word!`
+      this.alertTarget.style.display = "block"
     } else {
-      alert ("You guessed right!");
+      this.alertTextTarget.innerText = "You guessed right!"
+      this.alertTarget.style.display = "block"
+      this.round++;
+      if (this.round <= 3) {
+        this.roundTarget.innerText = this.round;
+        this.correctWord = this.#initGame();
+        console.log(this.correctWord);
+      } else {
+        this.rewardTarget.style.display = "flex"
+      }
     }
     // if (userWord !== this.correctWord) return alert(`Oops! ${userWord} is not the correct word!`);
     // if (userWord === this.correctWord) return alert ("You guessed right!");
-    this.round++;
-    if (this.round <= 3) {
-      this.roundTarget.innerText = this.round;
-      this.correctWord = this.#initGame();
-      console.log(this.correctWord);
-    } else {
-      this.rewardTarget.style.display = "flex"
-    }
       // alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
+  }
+
+  closeAlert() {
+    this.alertTarget.style.display = "none";
   }
 
   #initGame() {

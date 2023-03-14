@@ -1,8 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-MM">
   <div class="container-fluid d-flex align-items-center">
     <div class="nav-item active d-flex align-items-center">
-      <% if user_signed_in? && (params[:action] != "dashboard" && params[:action] != "home") %>
+      <% if user_signed_in? && (params[:action] != "dashboard" && params[:action] != "home" && params[:action] != "parents_dashboard") %>
         <%= link_to "Dashboard", dashboard_path, class: "button nav-link" %>
+      <% elsif user_signed_in? && (params[:action] == "parents_dashboard") %>
+        <%= link_to "Back to game", dashboard_path, class: "button nav-link" %>
       <% end %>
     </div>
 

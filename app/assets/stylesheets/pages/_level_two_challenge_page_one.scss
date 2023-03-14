@@ -66,6 +66,9 @@
 }
 
 .game-2-inputs{
+    animation: gelatine 0.5s;
+    animation-iteration-count: 1;
+
   input {
     background-color: $primary;
     border-radius: 48px;
@@ -97,3 +100,14 @@
   color:#D62828;
   font-weight:900;
 }
+.lvl2-icon-animation {
+  animation: gelatine 0.5s;
+  animation-iteration-count: 1;
+}
+
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }

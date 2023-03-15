@@ -1,7 +1,7 @@
 <%# Need to get d-none working, make button toggle link and add javascript controller, and get icons to all start in same place %>
 
 <h1>Welcome, <%= current_user.first_name %>'s parent!</h1>
-<div class="parent-dashboard container flex-column align-items-center">
+<div class="parent-dashboard container flex-column align-items-center", data-controller="dropdown">
   <div class="PD-card">
     <% if current_user.level == 0 %>
       <div class="level-card-locked align-items-center d-flex">
@@ -14,9 +14,9 @@
           <%= image_tag "PD_lvl_1_icon.png", class:"pd_icon_img" %>
           <h2>Level One</h2>
         </div>
-        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked" %>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked", data: { action:"click->dropdown#openFirst"} %>
       </div>
-      <div class="dropdown-card d-flex">
+      <div class="dropdown-card hidden" data-dropdown-target="detailsFirst">
         <div class="dropdown-info">
           <h2>Breathing Exercise</h2>
           <p>30-second breathing exercise. Studies have shown that even a single breathing practice significantly reduces blood pressure and stress levels.</p>
@@ -43,9 +43,9 @@
           <%= image_tag "PD_lvl_2_icon.png", class:"pd_icon_img" %>
           <h2>Level Two</h2>
         </div>
-        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked" %>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked", data: { action:"click->dropdown#openSecond"}  %>
       </div>
-      <div class="dropdown-card d-flex">
+      <div class="dropdown-card hidden" data-dropdown-target="detailsSecond">
         <div class="dropdown-info">
           <h2>5-4-3-2-1 Grounding Technique</h2>
           <p>In this level, <%= current_user.first_name %> was encouraged to observe their surroundings through each of the five senses, which is a grounding technique. This helps them to stay in the moment and reduces their stress.</p>
@@ -72,9 +72,9 @@
           <%= image_tag "PD_lvl_3_icon.png", class:"pd_icon_img" %>
           <h2>Level Three</h2>
         </div>
-        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked" %>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked", data: { action:"click->dropdown#openThird"} %>
       </div>
-      <div class="dropdown-card d-flex">
+      <div class="dropdown-card hidden" data-dropdown-target="detailsThird">
         <div class="dropdown-info">
           <h2>Distraction Technique</h2>
           <p>When anxiety levels are rising, focusing on an activity can pull us out of the immediate stress and allow us to then re-enter the stressful situation with a fresh perspective. Language games are particularly useful as they engage the prefrontal cortex (responsible for higher brain function), which can shut down when we are stressed. This is a useful technique, but must not be allowed to take the place of confronting the source of stress.</p>

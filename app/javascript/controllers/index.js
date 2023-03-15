@@ -13,6 +13,9 @@ application.register("cross-site-animations", CrossSiteAnimationsController)
 import DisableButtonController from "./disable_button_controller"
 application.register("disable-button", DisableButtonController)
 
+import DropdownController from "./dropdown_controller"
+application.register("dropdown", DropdownController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

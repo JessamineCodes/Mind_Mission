@@ -55,12 +55,12 @@ export default class extends Controller {
   #initGame() {
     const words = [
       {
-        word: "INTELLIGENCE",
-        hint: "secret information gathered by spies"
+        word: "STAKEOUT",
+        hint: "secretly watching a place or person to gather information"
       },
       {
-        word: "FINGERPRINT",
-        hint: "the pattern you leave behind on a surface after touching it"
+        word: "SECRETS",
+        hint: "knowledge that should not be known by others"
       },
       {
         word: "ESPIONAGE",

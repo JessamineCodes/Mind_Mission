@@ -126,6 +126,8 @@
   z-index: 3;
   background-color: $font-color;
   border-radius: 7px;
+  animation: gelatine 0.5s;
+  animation-iteration-count: 1;
 
   .close-btn {
     position: absolute;

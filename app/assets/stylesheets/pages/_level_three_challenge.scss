@@ -48,6 +48,18 @@
   margin-top: 30px;
 }
 
+.game-alert-image {
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -40px);
+}
+
+.hide-me {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* Input */
 #user-input {
   background: #FBD87D;
@@ -109,10 +121,10 @@
   border: solid 1px black;
   position: absolute;
   background-color: white;
-  top: 30%;
+  top: 45%;
   left: 40%;
   z-index: 3;
-  background-color: #F4EAD5;
+  background-color: $font-color;
   border-radius: 7px;
 
   .close-btn {
@@ -122,6 +134,12 @@
     right: 15px;
     cursor: pointer;
   }
+}
+
+.game-alert {
+  padding-top: 10px;
+  font-size: 22px;
+  color: #F4EAD5;
 }
 
 .letter {

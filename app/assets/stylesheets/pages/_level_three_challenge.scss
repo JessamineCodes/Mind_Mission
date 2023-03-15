@@ -116,22 +116,25 @@
 .game-3-alert-container {
   display: none;
   width: 300px;
-  height: 170px;
+  // height: 170px;
   padding: 30px;
   border: solid 1px black;
   position: absolute;
   background-color: white;
-  top: 45%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
   background-color: $font-color;
   border-radius: 7px;
 
   .close-btn {
-    position: absolute;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     // font-size: 1rem;
-    bottom: 5px;
-    right: 110px;
+    // bottom: 5px;
+    // right: 110px;
     cursor: pointer;
     // border: 1px solid teal;
     // background-color: teal;

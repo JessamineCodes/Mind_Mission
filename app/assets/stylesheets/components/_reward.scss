@@ -11,6 +11,8 @@
     margin-right: auto;
     left: 0;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     position: absolute;
     width: 550px;
     height: 498px;
@@ -19,8 +21,8 @@
     border-radius: 7px;
     display: none;
     z-index: 20;
-    animation: gelatine 0.5s;
-    animation-iteration-count: 1;
+    // animation: gelatine 0.5s;
+    // animation-iteration-count: 1;
 }
 
 .reward img{

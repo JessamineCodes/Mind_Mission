@@ -1,0 +1,91 @@
+<%# Need to get d-none working, make button toggle link and add javascript controller, and get icons to all start in same place %>
+
+<h1>Welcome, <%= current_user.first_name %>'s parent!</h1>
+<div class="parent-dashboard container flex-column align-items-center">
+  <div class="PD-card">
+    <% if current_user.level == 0 %>
+      <div class="level-card-locked align-items-center d-flex">
+      <%= image_tag "PD_lvl_locked_icon.png", class:"pd_icon_img m-3" %>
+      <h2>Level One</h2>
+      </div>
+    <% else %>
+      <div class="level-card-unlocked">
+        <div class="level-card-lvl-and-icon align-items-center d-flex">
+          <%= image_tag "PD_lvl_1_icon.png", class:"pd_icon_img" %>
+          <h2>Level One</h2>
+        </div>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked" %>
+      </div>
+      <div class="dropdown-card d-flex">
+        <div class="dropdown-info">
+          <h2>Breathing Exercise</h2>
+          <p>30-second breathing exercise. Studies have shown that even a single breathing practice significantly reduces blood pressure and stress levels.</p>
+          <%= link_to "More info", 'https://hbr.org/2020/09/research-why-breathing-is-so-effective-at-reducing-stress', class:"dropdown-link", target: '_blank' %>
+        </div>
+        <div class="dropdown-info">
+          <h2>Spoon Theory</h2>
+          <p><%= current_user.first_name %> learned about ’jet fuel theory’, which is our version of ‘spoon theory’. Spoon theory is a common way of visualising one’s energy for the day, so you can plan how to use it; hobbies and relaxing give you spoons, while physical and mental stress deduct spoons.</p>
+          <%= link_to "More info", 'https://familyandchildtherapy.com/2019/11/07/how-the-spoon-theory-can-help-us-put-a-fork-in-poor-communication-and-self-care/', class:"dropdown-link", target: '_blank' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="PD-card">
+    <% if current_user.level < 2 %>
+      <div class="level-card-locked align-items-center d-flex">
+      <%= image_tag "PD_lvl_locked_icon.png", class:"pd_icon_img m-3" %>
+      <h2>Level Two</h2>
+      </div>
+    <% else %>
+      <div class="level-card-unlocked">
+        <div class="level-card-lvl-and-icon align-items-center d-flex">
+          <%= image_tag "PD_lvl_2_icon.png", class:"pd_icon_img" %>
+          <h2>Level Two</h2>
+        </div>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked" %>
+      </div>
+      <div class="dropdown-card d-flex">
+        <div class="dropdown-info">
+          <h2>5-4-3-2-1 Grounding Technique</h2>
+          <p>In this level, <%= current_user.first_name %> was encouraged to observe their surroundings through each of the five senses, which is a grounding technique. This helps them to stay in the moment and reduces their stress.</p>
+          <%= link_to "More info", 'https://www.youtube.com/watch?v=30VMIEmA114', class:"dropdown-link", target: '_blank' %>
+        </div>
+        <div class="dropdown-info">
+          <h2>Mental Fog</h2>
+          <p>When our emotions are high, we experience ‘brain fog’, which will eventually disperse once we have calmed down. We encouraged <%= current_user.first_name %> to take deep breaths and wait out the fog, using their newly unlocked ‘x-ray sunglasses’ to see in the meantime.</p>
+          <%= link_to "More info", 'https://www.verywellmind.com/brain-fog-and-anxiety-5649769', class:"dropdown-link", target: '_blank' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="PD-card">
+    <% if current_user.level <3 %>
+      <div class="level-card-locked align-items-center d-flex">
+      <%= image_tag "PD_lvl_locked_icon.png", class:"pd_icon_img m-3" %>
+      <h2>Level Three</h2>
+      </div>
+    <% else %>
+      <div class="level-card-unlocked">
+        <div class="level-card-lvl-and-icon align-items-center d-flex">
+          <%= image_tag "PD_lvl_3_icon.png", class:"pd_icon_img" %>
+          <h2>Level Three</h2>
+        </div>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked" %>
+      </div>
+      <div class="dropdown-card d-flex">
+        <div class="dropdown-info">
+          <h2>Distraction Technique</h2>
+          <p>When anxiety levels are rising, focusing on an activity can pull us out of the immediate stress and allow us to then re-enter the stressful situation with a fresh perspective. Language games are particularly useful as they engage the prefrontal cortex (responsible for higher brain function), which can shut down when we are stressed. This is a useful technique, but must not be allowed to take the place of confronting the source of stress.</p>
+          <%= link_to "More info", 'https://www.annafreud.org/on-my-mind/self-care/distraction-techniques/', class:"dropdown-link", target: '_blank' %>
+        </div>
+        <div class="dropdown-info">
+          <h2>Overstimulation</h2>
+          <p><%= current_user.first_name %> learned that when your brain is stressed or tired, it is less capable of processing multiple sensory stimuli, which is called ‘overstimulation’ or ‘sensory overload’. The best ways to combat over-stimulation are often seeking out activities or people who make you feel safe, or possibly enjoying some alone time.</p>
+          <%= link_to "More info", 'https://www.anxietycentre.com/anxiety-disorders/symptoms/sensory-overload-anxiety/', class:"dropdown-link", target: '_blank' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

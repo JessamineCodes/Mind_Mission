@@ -62,4 +62,8 @@ class PagesController < ApplicationController
   def graduation
 
   end
+
+  def parents_dashboard
+
+  end
 end

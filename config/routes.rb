@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get 'level_three/challenge', to: 'pages#level_three_challenge'
   get 'level_three/snippet', to: 'pages#level_three_snippet'
 
+  get 'parents_dashboard', to: 'pages#parents_dashboard'
+
   get 'graduation', to: 'pages#graduation'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

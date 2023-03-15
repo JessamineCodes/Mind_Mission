@@ -32,6 +32,9 @@
   color: $accent;
 }
 
+.level-card-unlocked img {
+  margin-right: 16px;
+}
 
 .level-card-locked {
   width: 1050px;
@@ -49,8 +52,8 @@
   right: 48px;
 }
 
-.triangle-unlocked-open {
-  transform: rotate(-180deg);
+.triangle-open {
+  transform: rotate(180deg);
 }
 
 // Dropdown card styling
@@ -62,10 +65,17 @@
     border-radius: 0 0 7px 7px;
     background-color: #ffb8038a;
     display: flex;
+    padding: 16px;
   }
 
   .hidden {
     display: none;
+  }
+
+
+  .dropdown-dividing-line {
+    width: 0.1px;
+    border: 1px $secondary solid;
   }
 
   .dropdown-info {

@@ -1,11 +1,13 @@
 // General styling
 .parent-dashboard {
   display: flex;
+  width: 1200px;
 }
 
 .parent-dashboard h2 {
   font-family: 'Livvic';
   font-size: 48px;
+  font-weight: bolder;
 }
 
 .parent-dashboard p {
@@ -17,10 +19,11 @@
 
 .PD-card {
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .level-card-unlocked {
-  width: 1050px;
+  width: 100%;
   height: 105px;
   border-radius: 7px;
   background-color: $primary;
@@ -37,7 +40,7 @@
 }
 
 .level-card-locked {
-  width: 1050px;
+  width: 100%;
   height: 105px;
   border-radius: 7px;
   background-color: #3d2b3d32;
@@ -46,26 +49,38 @@
   align-items: center;
 }
 
-.triangle-unlocked {
+.triangle-positioning {
   position: absolute;
   top: 40px;
   right: 48px;
 }
 
 .triangle-open {
-  transform: rotate(180deg);
+  animation: rotate-down 1s ease forwards;
+  @keyframes rotate-down {
+   100% { transform: rotate(180deg)};
+  }
+}
+
+.triangle-closed {
+  animation: rotate-up 1s ease forwards;
+  @keyframes rotate-up {
+    0% { transform: rotate(180deg) };
+   100% { transform: rotate(0deg) };
+  }
 }
 
 // Dropdown card styling
 
   .dropdown-card {
-    width: 1050px;
+    width: 100%;
     // height: 276px;
     // overflow: auto;
     border-radius: 0 0 7px 7px;
     background-color: #ffb8038a;
     display: flex;
     padding: 16px;
+    // transition: height 0.5s ease-in-out;
   }
 
   .hidden {
@@ -80,8 +95,14 @@
 
   .dropdown-info {
     box-sizing: border-box;
-    width: 501px;
+    width: 50%;
     margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    // align-items: flex-start;
+
     // height: 260px;
     // position: relative;
   }
@@ -92,6 +113,7 @@
 
   .dropdown-info p {
     text-align: left;
+    margin-bottom: 40px;
   }
 
   .dropdown-link {
@@ -117,8 +139,9 @@
     justify-content: center;
     z-index: 10;
     margin-top: 0;
-    // position: absolute;
-    // bottom: 16px;
+    justify-self: flex-end;
+    position: absolute;
+    bottom: 0;
 
     &:hover{
       color: $primary;

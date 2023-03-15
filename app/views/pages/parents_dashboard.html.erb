@@ -14,7 +14,7 @@
           <%= image_tag "PD_lvl_1_icon.png", class:"pd_icon_img" %>
           <h2>Level One</h2>
         </div>
-        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked", data: { action:"click->dropdown#openFirst"} %>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-positioning", data: { action:"click->dropdown#openFirst", dropdown_target:"triangleFirstIcon"} %>
       </div>
       <div class="dropdown-card hidden" data-dropdown-target="detailsFirst">
         <div class="dropdown-info">
@@ -22,6 +22,7 @@
           <p>30-second breathing exercise. Studies have shown that even a single breathing practice significantly reduces blood pressure and stress levels.</p>
           <%= link_to "More info", 'https://hbr.org/2020/09/research-why-breathing-is-so-effective-at-reducing-stress', class:"dropdown-link", target: '_blank' %>
         </div>
+        <div class="dropdown-dividing-line"></div>
         <div class="dropdown-info">
           <h2>Spoon Theory</h2>
           <p><%= current_user.first_name %> learned about ’jet fuel theory’, which is our version of ‘spoon theory’. Spoon theory is a common way of visualising one’s energy for the day, so you can plan how to use it; hobbies and relaxing give you spoons, while physical and mental stress deduct spoons.</p>
@@ -43,7 +44,7 @@
           <%= image_tag "PD_lvl_2_icon.png", class:"pd_icon_img" %>
           <h2>Level Two</h2>
         </div>
-        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked", data: { action:"click->dropdown#openSecond"}  %>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-positioning", data: { action:"click->dropdown#openSecond", dropdown_target:"triangleSecondIcon"}  %>
       </div>
       <div class="dropdown-card hidden" data-dropdown-target="detailsSecond">
         <div class="dropdown-info">
@@ -72,12 +73,12 @@
           <%= image_tag "PD_lvl_3_icon.png", class:"pd_icon_img" %>
           <h2>Level Three</h2>
         </div>
-        <%= image_tag "PD_red_triangle.png", class:"triangle-unlocked", data: { action:"click->dropdown#openThird"} %>
+        <%= image_tag "PD_red_triangle.png", class:"triangle-positioning", data: { action:"click->dropdown#openThird", dropdown_target:"triangleThirdIcon"} %>
       </div>
       <div class="dropdown-card hidden" data-dropdown-target="detailsThird">
         <div class="dropdown-info">
           <h2>Distraction Technique</h2>
-          <p>When anxiety levels are rising, focusing on an activity can pull us out of the immediate stress and allow us to then re-enter the stressful situation with a fresh perspective. Language games are particularly useful as they engage the prefrontal cortex (responsible for higher brain function), which can shut down when we are stressed. This is a useful technique, but must not be allowed to take the place of confronting the source of stress.</p>
+          <p>When anxiety levels are rising, focusing on an activity can pull us out of the immediate stress and allow us to then re-enter the stressful situation with a fresh perspective. Language games are particularly useful as they engage the prefrontal cortex (responsible for higher brain function), which can shut down when we are stressed.</p>
           <%= link_to "More info", 'https://www.annafreud.org/on-my-mind/self-care/distraction-techniques/', class:"dropdown-link", target: '_blank' %>
         </div>
         <div class="dropdown-info">

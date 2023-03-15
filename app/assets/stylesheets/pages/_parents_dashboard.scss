@@ -60,7 +60,7 @@
     height: 276px;
     border-radius: 0 0 7px 7px;
     background-color: #ffb8038a;
-    display: none; //currently not working ad inheriting flex from .parent-dashboard
+    display: none !important; //currently not working ad inheriting flex from .parent-dashboard
   }
 
   .dropdown-info {

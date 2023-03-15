@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="crack-the-code"
 export default class extends Controller {
-  static targets = ["reward", "word", "hint", "input", "round", "alert", "alertText"]
+  static targets = ["reward", "word", "hint", "input", "round", "alert", "alertText", "box"]
 
   connect() {
     this.correctWord = this.#initGame();
@@ -10,7 +10,13 @@ export default class extends Controller {
   }
 
   showAnswer() {
-    this.wordTarget.innerText = this.correctWord.toUpperCase();
+    this.boxTarget.innerText = ""
+    for (let i = 0; i < this.correctWord.length; i++) {
+      const div = document.createElement("div");
+      div.classList.add("letter")
+      div.textContent = this.correctWord[i].toUpperCase()
+      this.boxTarget.appendChild(div)
+    }
   }
 
   checkWord() {
@@ -64,7 +70,16 @@ export default class extends Controller {
       let j = Math.floor(Math.random() * (i + 1));
       [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
     }
-    this.wordTarget.innerText = wordArray.join("");
+
+    this.boxTarget.innerText = ""
+    for (let i = 0; i < wordArray.length; i++) {
+      const div = document.createElement("div");
+      div.classList.add("letter")
+      div.textContent = wordArray[i]
+      this.boxTarget.appendChild(div)
+    }
+
+    // this.wordTarget.innerText = wordArray.join("");
     this.hintTarget.innerText = randomObj.hint;
     let correctWord = randomObj.word.toLowerCase();
     this.inputTarget.value = "";

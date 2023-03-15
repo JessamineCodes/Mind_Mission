@@ -25,10 +25,10 @@ export default class extends Controller {
       this.alertTextTarget.innerText = "Please enter a word"
       this.alertTarget.style.display = "block"
     } else if (userWord !== this.correctWord) {
-      this.alertTextTarget.innerText = `Oops! ${userWord} is not the correct word!`
+      this.alertTextTarget.innerText = `Try again! "${userWord}" is not correct!`
       this.alertTarget.style.display = "block"
     } else {
-      this.alertTextTarget.innerText = "You guessed right!"
+      this.alertTextTarget.innerText = `"${userWord}" is correct!`
       this.alertTarget.style.display = "block"
       this.round++;
       if (this.round <= 3) {

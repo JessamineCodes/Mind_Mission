@@ -25,6 +25,10 @@
     letter-spacing: 2rem;
   }
 
+  .hint-heading {
+    font-weight: 600;
+  }
+
   .rounds {
     margin-bottom: 0;
     align-self: flex-end;
@@ -75,7 +79,34 @@
   }
 }
 
+
+.explanation-text strong {
+  color: $accent;
+}
+
 .solution {
   font-size: 18px;
-  width: 148px;
+}
+
+// ALERTS
+
+.game-3-alert-container {
+  display: none;
+  width: 300px;
+  height: 150px;
+  padding: 30px;
+  border: solid 1px black;
+  position: absolute;
+  background-color: white;
+  top: 30%;
+  left: 40%;
+  z-index: 3;
+
+  .close-btn {
+    position: absolute;
+    font-size: 2rem;
+    top: 0;
+    right: 15px;
+    cursor: pointer;
+  }
 }

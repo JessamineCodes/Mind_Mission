@@ -19,9 +19,9 @@
     </script>
   </div>
   <% if user_signed_in? %>
-   <%= link_to "Enter", dashboard_path, class: "button" %>
+   <%= link_to "Enter", dashboard_path, class: "btn-splash" %>
   <% else %>
-    <%= link_to "Log In", new_user_session_path, class: "button" %>
+    <%= link_to "Log In", new_user_session_path, class: "btn-splash" %>
   <% end %>
 </div>
   <%# <div class="splash-circle">

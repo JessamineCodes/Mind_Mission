@@ -1,12 +1,16 @@
 
-<div class="container challenge one">
+<div class="container-challenge-one">
   <h1>Crack the Safe</h1>
-  <p>Spies need to remain calm under pressure, and deep breathing can help you stay calm.</p>
-  <p>Breathe in when the dial turns to the left and out when it turns to the right!</p>
+  <p class="mb-0">Spies need to remain calm under pressure, and <strong>deep breathing</strong> can help you stay calm.</p>
+  <p class="mb-0"><strong>Breathe in</strong> through your nose when the dial turns to the <strong>left</strong> and <strong>out</strong> through your mouth when it turns to the <strong>right</strong>!</p>
   <div class="challenge-and-button" data-controller="rotate-dial">
     <div class="reward" data-rotate-dial-target="reward">
       <h1>Good job!</h1>
-      <%= image_tag "reward_placeholder.png" %>
+
+      <div class="reward-background">
+        <%= image_tag "jetpack_reward.png" %>
+      </div>
+
       <p>You've passed level 1 and unlocked a jetpack!</p>
       <%= link_to "Great!", level_one_checkpoint_path, class:"button"%>
     </div>

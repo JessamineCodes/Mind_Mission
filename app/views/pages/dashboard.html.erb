@@ -5,36 +5,58 @@
     <%# <p>Click on the light question mark to start your next super secret spy challenge....<p> %>
   </div>
 
-  <div class="mt-5 d-flex align-items-center">
+  <div class="mt-3 d-flex align-items-center">
     <div class="tree-container">
       <%= image_tag "tree branch.png", class:"tree" %>
       <div class="acorn acorn-1">
         <% if current_user.level >= 1 %>
-          <%= link_to (image_tag "jetpack.png"), level_one_challenge_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "jetpack.png"), level_one_challenge_path %>
+          </div>
         <% else %>
-          <%= link_to (image_tag "question mark light.png"), level_one_challenge_path %>
+          <div class="acorn-next-level">
+            <%= link_to (image_tag "question mark light.png"), level_one_challenge_path %>
+          </div>
         <% end %>
       </div>
       <div class="acorn acorn-2">
         <% if current_user.level >=2 %>
-          <%= link_to (image_tag "glasses.png"), level_two_challenge_step_one_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "glasses.png"), level_two_challenge_step_one_path %>
+          </div>
         <% elsif current_user.level == 1 %>
-          <%= link_to (image_tag "question mark light.png"), level_two_challenge_step_one_path %>
+          <div class="acorn-next-level">
+            <%= link_to (image_tag "question mark light.png"), level_two_challenge_step_one_path %>
+          </div>
         <% else %>
           <%= image_tag "question mark dark.png" %>
         <% end %>
       </div>
       <div class="acorn acorn-3">
         <% if current_user.level >= 3 %>
-          <%= link_to (image_tag "umbrella.png"),  level_three_challenge_path %>
+          <div class="acorn-clickable">
+            <%= link_to (image_tag "umbrella.png"),  level_three_challenge_path %>
+          </div>
         <% elsif current_user.level == 2 %>
-          <%= link_to (image_tag "question mark light.png"),  level_three_challenge_path %>
+          <div class="acorn-next-level">
+            <%= link_to (image_tag "question mark light.png"),  level_three_challenge_path %>
+          </div>
         <% else %>
           <%= image_tag "question mark dark.png" %>
         <% end %>
       </div>
     </div>
+
   <div class="squirrel-img">
-    <%= image_tag "squirrel1.png" , class:"squirrel" %>
+   <% if current_user.level == 0 %>
+      <%= image_tag  "Original Sammy.png", class:"squirrel" %>
+    <% elsif current_user.level== 1%>
+      <%= image_tag "Sammy Chal 1.png", class:"squirrel" %>
+    <% elsif current_user.level == 2 %>
+      <%= image_tag "Sammy Chal 2.png", class:"squirrel" %>
+    <% else %>
+      <%= image_tag "Sammy Chal 3.png", class:"squirrel" %>
+    <% end %>
+    </div>
   </div>
 </div>

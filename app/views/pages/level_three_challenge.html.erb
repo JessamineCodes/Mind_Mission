@@ -7,12 +7,14 @@
     <p class="explanation-text">The enemy agents have jumbled up these <strong>three</strong> important words - <strong>unscramble</strong> them!</p>
     <div data-controller="crack-the-code" data-action="keydown.enter->crack-the-code#checkWordEnter">
       <div class="game-3-alert-container" data-crack-the-code-target="alert">
-        <span class="close-btn" data-action="click->crack-the-code#closeAlert">&times;</span>
+
+        <span class="close-btn" data-action="click->crack-the-code#closeAlert">OK</span>
 
         <div class="" style="height:40px"></div>
         <%= image_tag "Good-job.png", id: "correct", class: "game-alert-image hide-me" %>
         <%= image_tag "Wrong.png", id: "wrong", class: "game-alert-image hide-me" %>
         <%= image_tag "Try-again.png", id: "try-again", class: "game-alert-image hide-me" %>
+
         <p class="game-alert" data-crack-the-code-target="alertText"></p>
 
       </div>
@@ -46,6 +48,8 @@
     </div>
   </div>
 </div>
+
+<audio src="app/assets/sounds/sound.mp3" id="gameSound"></audio>
 
 <%# <div class="container">
   <h1>Level 3 Challenge</h1>

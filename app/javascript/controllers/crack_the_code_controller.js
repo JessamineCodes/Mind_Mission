@@ -2,15 +2,21 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="crack-the-code"
 export default class extends Controller {
-  static targets = ["reward", "word", "hint", "input", "round", "alert", "alertText"]
+  static targets = ["reward", "word", "hint", "input", "round", "alert", "alertText", "box"]
 
   connect() {
-    this.correctWord = this.#initGame();
     this.round = 1;
+    this.correctWord = this.#initGame();
   }
 
   showAnswer() {
-    this.wordTarget.innerText = this.correctWord.toUpperCase();
+    this.boxTarget.innerText = ""
+    for (let i = 0; i < this.correctWord.length; i++) {
+      const div = document.createElement("div");
+      div.classList.add("letter")
+      div.textContent = this.correctWord[i].toUpperCase()
+      this.boxTarget.appendChild(div)
+    }
   }
 
   checkWord() {
@@ -28,7 +34,6 @@ export default class extends Controller {
       if (this.round <= 3) {
         this.roundTarget.innerText = this.round;
         this.correctWord = this.#initGame();
-        console.log(this.correctWord);
       } else {
         this.rewardTarget.style.display = "flex"
       }
@@ -36,6 +41,11 @@ export default class extends Controller {
     // if (userWord !== this.correctWord) return alert(`Oops! ${userWord} is not the correct word!`);
     // if (userWord === this.correctWord) return alert ("You guessed right!");
       // alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
+  }
+
+  checkWordEnter(e) {
+    e.preventDefault();
+    this.checkWord();
   }
 
   closeAlert() {
@@ -58,13 +68,30 @@ export default class extends Controller {
       }
     ];
     // get random object from words
-    let randomObj = words[Math.floor(Math.random() * words.length)];
+    // let randomObj = words[Math.floor(Math.random() * words.length)];
+    let randomObj;
+    if (this.round === 1) {
+      randomObj = words[0]
+    } else if (this.round === 2) {
+      randomObj = words[1]
+    } else {
+      randomObj = words[2]
+    }
     let wordArray = randomObj.word.split("");
     for (let i = wordArray.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
     }
-    this.wordTarget.innerText = wordArray.join("");
+
+    this.boxTarget.innerText = ""
+    for (let i = 0; i < wordArray.length; i++) {
+      const div = document.createElement("div");
+      div.classList.add("letter")
+      div.textContent = wordArray[i]
+      this.boxTarget.appendChild(div)
+    }
+
+    // this.wordTarget.innerText = wordArray.join("");
     this.hintTarget.innerText = randomObj.hint;
     let correctWord = randomObj.word.toLowerCase();
     this.inputTarget.value = "";

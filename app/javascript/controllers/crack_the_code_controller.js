@@ -20,16 +20,40 @@ export default class extends Controller {
   }
 
   checkWord() {
+
+    const gameSound = document.querySelector("#gameSound");
+    gameSound.play;
+
+    const correctImage = document.querySelector("#correct")
+    const wrongImage = document.querySelector("#wrong")
+    const tryAgainImage = document.querySelector("#try-again")
+
+    if (!correctImage.classList.contains("hide-me")) {
+      correctImage.classList.add("hide-me")
+    }
+    if (!wrongImage.classList.contains("hide-me")) {
+      wrongImage.classList.add("hide-me")
+    }
+    if (!tryAgainImage.classList.contains("hide-me")) {
+      tryAgainImage.classList.add("hide-me")
+    }
+
+    // console.log(correctImage)
+
     let userWord = this.inputTarget.value.toLocaleLowerCase();
     if (!userWord) {
-      this.alertTextTarget.innerText = "Please enter a word"
+      this.alertTextTarget.innerText = "Oops! Please enter a word"
       this.alertTarget.style.display = "block"
+      wrongImage.classList.remove("hide-me")
     } else if (userWord !== this.correctWord) {
       this.alertTextTarget.innerText = `Try again! "${userWord}" is not correct!`
       this.alertTarget.style.display = "block"
+      tryAgainImage.classList.remove("hide-me")
     } else {
-      this.alertTextTarget.innerText = `"${userWord}" is correct!`
+      this.alertTextTarget.innerText = `Great job! "${userWord}" is correct!`
       this.alertTarget.style.display = "block"
+      correctImage.classList.remove("hide-me")
+      // this.alertTarget.insertAdjacentElement("beforebegin", correctImage)
       this.round++;
       if (this.round <= 3) {
         this.roundTarget.innerText = this.round;

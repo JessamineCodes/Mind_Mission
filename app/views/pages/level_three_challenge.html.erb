@@ -7,8 +7,16 @@
     <p class="explanation-text">The enemy agents have jumbled up these <strong>three</strong> important words - <strong>unscramble</strong> them!</p>
     <div data-controller="crack-the-code" data-action="keydown.enter->crack-the-code#checkWordEnter">
       <div class="game-3-alert-container" data-crack-the-code-target="alert">
+
         <span class="close-btn" data-action="click->crack-the-code#closeAlert">OK</span>
+
+        <div class="" style="height:40px"></div>
+        <%= image_tag "Good-job.png", id: "correct", class: "game-alert-image hide-me" %>
+        <%= image_tag "Wrong.png", id: "wrong", class: "game-alert-image hide-me" %>
+        <%= image_tag "Try-again.png", id: "try-again", class: "game-alert-image hide-me" %>
+
         <p class="game-alert" data-crack-the-code-target="alertText"></p>
+
       </div>
       <div class="d-flex justify-content-center">
         <div class="scramble_game_container">
@@ -34,8 +42,8 @@
         </div>
       </div>
       <div class="buttons d-flex justify-content-center">
-        <button type="button" class="solution button px-3 py-3" data-action="click->crack-the-code#showAnswer" style="margin-right: 15px;">Reveal answer</button>
-        <button type="button" class="check button px-3 py-3" data-action="click->crack-the-code#checkWord" style="margin-left: 15px;">Submit!</button>
+        <button type="button" class="solution button px-3" data-action="click->crack-the-code#showAnswer" style="margin-right: 15px;">Reveal answer</button>
+        <button type="button" class="check button px-3" data-action="click->crack-the-code#checkWord" style="margin-left: 15px;">Submit!</button>
       </div>
     </div>
   </div>

@@ -57,18 +57,23 @@
 
   .dropdown-card {
     width: 1050px;
-    height: 276px;
+    // height: 276px;
+    // overflow: auto;
     border-radius: 0 0 7px 7px;
     background-color: #ffb8038a;
-    display: none !important; //currently not working ad inheriting flex from .parent-dashboard
+    display: flex;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .dropdown-info {
     box-sizing: border-box;
     width: 501px;
     margin: 16px;
-    height: 260px;
-    position: relative;
+    // height: 260px;
+    // position: relative;
   }
 
   .dropdown-info h2 {
@@ -102,8 +107,8 @@
     justify-content: center;
     z-index: 10;
     margin-top: 0;
-    position: absolute;
-    bottom: 24px;
+    // position: absolute;
+    // bottom: 16px;
 
     &:hover{
       color: $primary;

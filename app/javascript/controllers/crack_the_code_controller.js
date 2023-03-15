@@ -20,6 +20,10 @@ export default class extends Controller {
   }
 
   checkWord() {
+
+    const gameSound = document.querySelector("#gameSound");
+    gameSound.play;
+
     let userWord = this.inputTarget.value.toLocaleLowerCase();
     if (!userWord) {
       this.alertTextTarget.innerText = "Please enter a word"

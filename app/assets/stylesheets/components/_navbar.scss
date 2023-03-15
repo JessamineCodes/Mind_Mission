@@ -22,3 +22,13 @@
   font-size: 24px;
   color: $secondary;
 }
+
+.dropdown-item{
+  color: $secondary;
+  font-size: 20px;
+  font-family: $headers-font;
+  font-weight: bold;
+  &:hover{
+    color: $secondary;
+}
+}

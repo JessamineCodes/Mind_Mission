@@ -5,7 +5,7 @@
     </div>
     <p class="explanation-text">When you're stressed it's good to get your brain whirring and <strong>focus</strong> on a puzzle!</p>
     <p class="explanation-text">The enemy agents have jumbled up these <strong>three</strong> important words - <strong>unscramble</strong> them!</p>
-    <div data-controller="crack-the-code">
+    <div data-controller="crack-the-code" data-action="keydown.enter->crack-the-code#checkWordEnter">
       <div class="game-3-alert-container" data-crack-the-code-target="alert">
         <span class="close-btn" data-action="click->crack-the-code#closeAlert">&times;</span>
         <p class="game-alert" data-crack-the-code-target="alertText"></p>

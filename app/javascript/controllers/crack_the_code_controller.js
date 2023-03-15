@@ -5,8 +5,8 @@ export default class extends Controller {
   static targets = ["reward", "word", "hint", "input", "round", "alert", "alertText", "box"]
 
   connect() {
-    this.correctWord = this.#initGame();
     this.round = 1;
+    this.correctWord = this.#initGame();
   }
 
   showAnswer() {
@@ -34,7 +34,6 @@ export default class extends Controller {
       if (this.round <= 3) {
         this.roundTarget.innerText = this.round;
         this.correctWord = this.#initGame();
-        console.log(this.correctWord);
       } else {
         this.rewardTarget.style.display = "flex"
       }
@@ -42,6 +41,11 @@ export default class extends Controller {
     // if (userWord !== this.correctWord) return alert(`Oops! ${userWord} is not the correct word!`);
     // if (userWord === this.correctWord) return alert ("You guessed right!");
       // alert(`Yay! ${userWord.toUpperCase()} is the correct word!`)
+  }
+
+  checkWordEnter(e) {
+    e.preventDefault();
+    this.checkWord();
   }
 
   closeAlert() {
@@ -64,7 +68,15 @@ export default class extends Controller {
       }
     ];
     // get random object from words
-    let randomObj = words[Math.floor(Math.random() * words.length)];
+    // let randomObj = words[Math.floor(Math.random() * words.length)];
+    let randomObj;
+    if (this.round === 1) {
+      randomObj = words[0]
+    } else if (this.round === 2) {
+      randomObj = words[1]
+    } else {
+      randomObj = words[2]
+    }
     let wordArray = randomObj.word.split("");
     for (let i = wordArray.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));

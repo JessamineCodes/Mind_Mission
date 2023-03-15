@@ -107,10 +107,10 @@
   border: solid 1px black;
   position: absolute;
   background-color: white;
-  top: 30%;
+  top: 45%;
   left: 40%;
   z-index: 3;
-  background-color: #F4EAD5;
+  background-color: $font-color;
   border-radius: 7px;
 
   .close-btn {
@@ -120,6 +120,12 @@
     right: 15px;
     cursor: pointer;
   }
+}
+
+.game-alert {
+  padding-top: 10px;
+  font-size: 22px;
+  color: #F4EAD5;
 }
 
 .letter {

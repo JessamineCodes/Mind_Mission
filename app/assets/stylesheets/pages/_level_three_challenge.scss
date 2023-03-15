@@ -48,6 +48,18 @@
   margin-top: 30px;
 }
 
+.game-alert-image {
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -40px);
+}
+
+.hide-me {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* Input */
 #user-input {
   background: #FBD87D;

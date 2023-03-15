@@ -22,7 +22,8 @@ export default class extends Controller {
   checkWord() {
 
     const gameSound = document.querySelector("#gameSound");
-    gameSound.play;
+    console.log(gameSound)
+    gameSound.play();
 
     const correctImage = document.querySelector("#correct")
     const wrongImage = document.querySelector("#wrong")

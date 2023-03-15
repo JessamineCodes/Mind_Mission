@@ -11,7 +11,7 @@
        <%= image_tag "sunglasses_reward.png" %>
       </div>
         <p>You've passed level 2 and unlocked X-ray sunglasses!</p>
-     
+
       <%= link_to "Great!", level_two_checkpoint_path, class:"button"%>
     </div>
     <%= simple_form_for(:quiz, url:level_two_snippet_path, method: :get, data: {action: "submit->disable-button#openReward"}) do |f| %>

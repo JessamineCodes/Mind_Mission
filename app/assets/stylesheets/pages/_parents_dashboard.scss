@@ -80,6 +80,9 @@
     background-color: #ffb8038a;
     display: flex;
     padding: 16px;
+    transition: 0.3s;
+    position: relative;
+    top: -5px;
     // transition: height 0.5s ease-in-out;
   }
 

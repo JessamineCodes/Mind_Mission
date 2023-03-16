@@ -4,7 +4,7 @@
   <h3 style="text-align: center;padding-top:50px;">List 4 things you can <strong>touch</strong></h3>
 
   <div class="challenge form mt-6" data-controller="disable-button">
-    <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get) do |f| %>
+    <%= simple_form_for(:quiz, url:level_two_challenge_step_three_path, method: :get, data: { "disable-button-target": "form" }) do |f| %>
 
       <div class="game-2-container-2">
         <div class="game-wrapper">
@@ -31,9 +31,10 @@
         </div>
 
         <div class="challenge 2 d-flex justify-content-center mt-4">
-            <%= f.button :submit,"Next", disabled: true, data: {disable_button_target: "button"}, class:"button button-challenge-2 btn-bg"%>
+            <%= f.button :submit,"Next", disabled: true, data: {disable_button_target: "button", action: "click->disable-button#nextSound"}, class:"button button-challenge-2 btn-bg"%>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+<%= audio_tag "NextSound.mp3", id: "nextSound" %>

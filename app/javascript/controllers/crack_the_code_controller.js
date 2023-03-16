@@ -21,13 +21,14 @@ export default class extends Controller {
 
   checkWord() {
 
-    const gameSound = document.querySelector("#gameSound");
-    console.log(gameSound)
-    gameSound.play();
+    console.log('updated');
+    const correctSound = document.querySelector("#correctSound");
+    const wrongSound = document.querySelector("#wrongSound");
+    const tryAgainSound = document.querySelector("#tryAgainSound");
 
-    const correctImage = document.querySelector("#correct")
-    const wrongImage = document.querySelector("#wrong")
-    const tryAgainImage = document.querySelector("#try-again")
+    const correctImage = document.querySelector("#correct");
+    const wrongImage = document.querySelector("#wrong");
+    const tryAgainImage = document.querySelector("#try-again");
 
     if (!correctImage.classList.contains("hide-me")) {
       correctImage.classList.add("hide-me")
@@ -46,21 +47,29 @@ export default class extends Controller {
       this.alertTextTarget.innerText = "Oops! Please enter a word"
       this.alertTarget.style.display = "block"
       wrongImage.classList.remove("hide-me")
+      tryAgainSound.play();
     } else if (userWord !== this.correctWord) {
       this.alertTextTarget.innerText = `Try again! "${userWord}" is not correct!`
       this.alertTarget.style.display = "block"
       tryAgainImage.classList.remove("hide-me")
+      wrongSound.play();
     } else {
       this.alertTextTarget.innerText = `Great job! "${userWord}" is correct!`
       this.alertTarget.style.display = "block"
       correctImage.classList.remove("hide-me")
       // this.alertTarget.insertAdjacentElement("beforebegin", correctImage)
       this.round++;
+      correctSound.play();
       if (this.round <= 3) {
         this.roundTarget.innerText = this.round;
         this.correctWord = this.#initGame();
       } else {
-        this.rewardTarget.style.display = "flex"
+        const showReward = () => {
+          this.rewardTarget.style.display = "flex";
+          const rewardSound = document.querySelector("#rewardSound")
+          rewardSound.play()
+        }
+        setTimeout(showReward, 1000);
       }
     }
     // if (userWord !== this.correctWord) return alert(`Oops! ${userWord} is not the correct word!`);

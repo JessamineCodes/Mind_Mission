@@ -49,8 +49,10 @@
   </div>
 </div>
 
-<%= audio_tag"sound.mp3", id: "gameSound" %>
-
+<%= audio_tag "WinSound.mp3", id: "correctSound" %>
+<%= audio_tag "WrongSound.mp3", id: "wrongSound" %>
+<%= audio_tag "EmptySound.mp3", id: "tryAgainSound" %>
+<%= audio_tag "CompletedSound.mp3", id: "rewardSound" %>
 <%# <div class="container">
   <h1>Level 3 Challenge</h1>
   <p>Time to get your brain whirring! The enemy agents have jumbled up these three important words - unscramble them!</p>

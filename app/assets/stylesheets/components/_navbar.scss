@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-end;
   background: $background;
+  z-index: 10;
 }
 
 .navbar-MM .navbar-collapse {

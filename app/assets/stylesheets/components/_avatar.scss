@@ -2,6 +2,11 @@
   width: 80px;
   border-radius: 50%;
 }
+.avatar:hover {
+  width: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .avatar-large {
   width: 56px;
   border-radius: 50%;
